@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 
+// macros
 #define ARR_SIZE    1000
 #define CTRL_A      1
 #define ENTER       10
