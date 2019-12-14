@@ -26,7 +26,7 @@ int main()
 
     printf("Num of characters each line: 1000\n");
 
-    while (input_val = getchar())
+    while ((input_val = getchar()))
     {
         // if the value is ctrl + A, print the content in the buffer and break the loop
         if (input_val == CTRL_A) 
