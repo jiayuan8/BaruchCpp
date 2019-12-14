@@ -25,7 +25,6 @@ int main()
     char input_buffer[ARR_SIZE + 1];        // the buffer that stores the input
     char file_name[FM_SIZE + 1];            // the buffer that stores the filename
     int num_char = 0;                       // number of characters stored in the buffer
-    // FILE * fp;                           // the file descripter to use
 
     // clear the filename buffer to pervant any garbage
     for (int i = 0; i <= FM_SIZE; i++)
