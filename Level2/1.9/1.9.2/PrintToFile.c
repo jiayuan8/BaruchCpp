@@ -38,7 +38,8 @@ int main()
     printf("Please Input the FileName: ");
 
     // reveice a filename and open the file
-    if (scanf("%s", file_name)) {
+    if (scanf("%s", file_name)) 
+    {
         printf("The filename you input is %s\n", file_name);
     }
 
