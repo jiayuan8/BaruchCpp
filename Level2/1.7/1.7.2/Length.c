@@ -37,7 +37,7 @@ int main()
     string[i]='\0';
     // String must be closed with \0
     printf("\nString length (My Length Implemetation) is %d\n", Length(string));
-    printf("String length (strlen in standard lib)  is %d\n", strlen(string));
+    printf("String length (strlen in standard lib)  is %d\n", int(strlen(string)));
     return 0;
 }
 
