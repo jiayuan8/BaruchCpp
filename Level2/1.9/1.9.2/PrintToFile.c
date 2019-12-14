@@ -44,7 +44,7 @@ int main()
 
     FILE* fp = fopen(file_name, "w+");
 
-    while (input_val = getchar())
+    while ((input_val = getchar()))
     {
         /* 
          * if the value is ctrl + A, write the content in the buffer 
