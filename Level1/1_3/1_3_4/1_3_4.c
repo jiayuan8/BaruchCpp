@@ -1,3 +1,10 @@
+/* 1_3_4.cpp
+ *
+ * @Author: Jiayuan Li
+ * @Description: Solution for exercise 1.3.4
+ * @version 1.0
+ */
+
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
