@@ -1,5 +1,1 @@
-*
-!/**/*.cpp
-!/**/*.vcxproj
-!/**/*.vcxproj.filters
-!/**/*.sln
+*.out
