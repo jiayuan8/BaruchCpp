@@ -15,14 +15,6 @@ using std::string;
 
 int main()
 {
-    /* 
-     * Before adding the copy constructor:
-     * one constructor has been called!
-     * one copy constructor has been called!
-     * two destructor has been called!
-     * The number of calls for constructors has been reduced by 1
-     */
-
     double x_input;     // the input value for x
     double y_input;     // the input value for y
 
