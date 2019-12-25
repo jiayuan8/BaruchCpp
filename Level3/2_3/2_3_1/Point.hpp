@@ -24,8 +24,12 @@ public:
     string ToString();  // function that return a description of the point
 
     // for 2.2.2
-    double DistanceOrigin();    // Calculate the distance to origin
-    double Distance(Point p);   // Calculate the distance between two points
+    double DistanceOrigin();    // calculate the distance to origin
+    double Distance(Point p);   // calculate the distance between two points
+
+    // for 2.3.1
+    Point(double x, double y);  // new constructor
+    Point(const Point& other);  // copy constructor
 
 private:
     double m_x;         // the x coordinate of the point
