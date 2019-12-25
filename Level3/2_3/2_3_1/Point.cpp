@@ -65,14 +65,14 @@ double Point::Distance(Point p)
 
 Point::Point(double x, double y)
 {
-    cout << "The new constructor has been called!" << endl;
+    cout << "***The new constructor has been called!***" << endl;
     m_x = x;
     m_y = y;
 }
 
 Point::Point(const Point& other)
 {
-    cout << "The copy constructor has been called!" << endl;
+    cout << "***The copy constructor has been called!***" << endl;
     m_x = other.m_x;
     m_y = other.m_y;
 }

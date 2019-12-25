@@ -15,6 +15,22 @@ using std::string;
 
 int main()
 {
+    /* 1.
+     * Before adding the copy constructor:
+     * Two default constructor has been called!
+     * Three destructor has been called!
+     * They are not the same
+     */
+
+    /* 2.
+     * After adding the copy constructor:
+     * Two default constructor has been called!
+     * One copy constructor has been called!
+     * Three destructor has been called!
+     * They are the same
+     */
+
+
     double x_input;     // the input value for x
     double y_input;     // the input value for y
 
@@ -26,12 +42,13 @@ int main()
         return 0;
     }
 
-    // construct point
-    Point test_point = Point();
+    // construct point using the new constructor
+    Point test_point = Point(x_input, y_input);
 
-    // set the point coordinate
-    test_point.SetX(x_input);
-    test_point.SetY(y_input);
+    // construct point using the default constructor
+    // Point test_point = Point;
+    // test_point.SetX(x_input);
+    // test_point.SetY(y_input);
 
     // print the description
     cout << test_point.ToString() << endl;
@@ -47,7 +64,8 @@ int main()
     Point test_point_2 = Point();
     test_point_2.SetX(2);
     test_point_2.SetY(3);
-    cout << "the distance to (2,3) is: " << test_point.Distance(test_point_2) << endl;
-
+    double dist = test_point.Distance(test_point_2);
+    cout << "the distance to (2,3) is: " << dist << endl;
+    
     return 0;
 }
