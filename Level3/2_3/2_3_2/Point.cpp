@@ -56,7 +56,7 @@ double Point::DistanceOrigin()
     return sqrt(m_x * m_x + m_y * m_y);
 }
 
-double Point::Distance(Point& p)
+double Point::Distance(const Point& p)
 {
     double x_rel = m_x - p.m_x; // relative distance of x
     double y_rel = m_y - p.m_y; // relative distance of y

@@ -25,7 +25,7 @@ public:
 
     // for 2.2.2
     double DistanceOrigin();    // calculate the distance to origin
-    double Distance(Point& p);   // calculate the distance between two points
+    double Distance(const Point& p);   // calculate the distance between two points
 
     // for 2.3.1
     Point(double x, double y);  // new constructor
