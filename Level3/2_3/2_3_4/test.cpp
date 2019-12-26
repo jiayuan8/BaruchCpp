@@ -24,6 +24,7 @@ int main()
     cout << "The y coordinate of the const point is: " << cp.Y() << endl;
     cout << "The dist to (0, 0) is: " << cp.Distance() << endl;
     cout << "The dist to (1, 1) is: " << cp.Distance(Point(1,1)) << endl;
+    cout << cp.ToString() << endl;
 
     return 0;
 }

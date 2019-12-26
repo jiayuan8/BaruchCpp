@@ -21,7 +21,7 @@ public:
     double Y() const;   // function returns y coordinate of the point
     void X(double new_x);    // function set x coordinate of the point
     void Y(double new_y);    // function set y coordinate of the point
-    string ToString();  // function that return a description of the point
+    string ToString() const; // function that return a description of the point
 
     double Distance() const; // calculate the distance to origin
     double Distance(const Point& p) const;  // calculate the distance between two points

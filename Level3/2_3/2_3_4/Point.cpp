@@ -45,7 +45,7 @@ void Point::Y(double new_y)
     m_y = new_y;
 }
 
-string Point::ToString()
+string Point::ToString() const
 {
     return "Point(" + to_string(m_x) + ", " + to_string(m_y) + ")";
 }
