@@ -6,9 +6,9 @@
  */
 
 #include "Point.hpp"
-#include <string.h>
+#include <sstream>
 
-using std::to_string;
+using std::stringstream;
 
 Point::Point(): m_x(0), m_y(0)
 {
@@ -42,5 +42,7 @@ void Point::SetY(double new_y)
 
 string Point::ToString()
 {
-    return "Point(" + to_string(m_x) + ", " + to_string(m_y) + ")";
+    stringstream res;
+    res << "Point(" << m_x << ", " << m_y << ")";
+    return res.str();
 }
