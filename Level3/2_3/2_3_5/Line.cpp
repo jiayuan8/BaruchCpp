@@ -40,28 +40,33 @@ Line::~Line()
 
 Point Line::P1() const
 {
+    // return the start point
     return p_start;
 }
 
 Point Line::P2() const
 {
+    // return the end point
     return p_end;
 }
 
 void Line::P1(const Point& other)
 {
+    // setter function for start point
     p_start.X(other.X());
     p_start.Y(other.Y());
 }
 
 void Line::P2(const Point& other)
 {
+    // setter function for end point
     p_end.X(other.X());
     p_end.Y(other.Y());
 }
 
 string Line::ToString() const
 {
+    // print the start point, end point and the length of the line
     string res = "";
     res = "Start Point: " + p_start.ToString() + "\n";
     res += "End Point:   " + p_end.ToString() + "\n";
@@ -71,5 +76,6 @@ string Line::ToString() const
 
 double Line::Length() const
 {
+    // return the dist from start point to the end point
     return p_start.Distance(p_end);
 }
