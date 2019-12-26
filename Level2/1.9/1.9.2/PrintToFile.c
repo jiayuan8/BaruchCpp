@@ -25,6 +25,7 @@ int main()
     char input_buffer[ARR_SIZE + 1];        // the buffer that stores the input
     char file_name[FM_SIZE + 1];            // the buffer that stores the filename
     int num_char = 0;                       // number of characters stored in the buffer
+    FILE* fp;                               // file descriptor of the opened file
 
     // clear the filename buffer to pervant any garbage
     for (int i = 0; i <= FM_SIZE; i++)
@@ -41,8 +42,7 @@ int main()
     {
         printf("The filename you input is %s\n", file_name);
     }
-
-    FILE* fp = fopen(file_name, "w+");
+    fp = fopen(file_name, "w+");
 
     while ((input_val = getchar()))
     {
