@@ -1,6 +1,6 @@
 /*  test.cpp
  *  ------------------------------------------
- *  @description: test file for class Point
+ *  @description: test file for class Circle
  *  @author: Jiayuan Li
  *  @version: 1.0 Dec 25, 2019
  */
@@ -26,8 +26,11 @@ int main()
     cout << "circumference: " << new_circle.Circumference() << endl;
 
     cout << "\n*** test setter functions***\n";
-    new_circle.CenterPoint(Point(1, 2));
-    new_circle.Radius(6);
+    double x_1, y_1, r;
+    cout <<"please input x1, y1, r as '<x1> <y1> <r>': ";
+    cin >> x_1 >> y_1 >> r;
+    new_circle.CenterPoint(Point(x_1, y_1));
+    new_circle.Radius(r);
 
     cout << "*** test ToString()***\n";
     cout << new_circle.ToString() << endl;
@@ -37,7 +40,7 @@ int main()
     cout << new_circle2.ToString() << endl;
 
     cout << "\n*** test constructor by point***\n";
-    Circle new_circle3 = Circle(Point(5, 5), 99);
+    Circle new_circle3 = Circle(Point(x_1, y_1), r);
     cout << new_circle3.ToString() << endl;
 
     return 0;
