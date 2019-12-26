@@ -1,6 +1,6 @@
 /*  Point.hpp
  *  ------------------------------------------
- *  @description: header file of Point class, implement const function
+ *  @description: header file of Point class
  *  @author: Jiayuan Li
  *  @version: 1.0 Dec 25, 2019
  */

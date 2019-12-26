@@ -6,10 +6,10 @@
  */
 
 #include "Line.hpp"
-#include <cstring>
+#include <sstream>
 
 using std::string;
-using std::to_string;
+using std::stringstream;
 
 Line::Line()
 {
@@ -67,11 +67,11 @@ void Line::P2(const Point& other)
 string Line::ToString() const
 {
     // print the start point, end point and the length of the line
-    string res = "";
-    res = "Start Point: " + p_start.ToString() + "\n";
-    res += "End Point:   " + p_end.ToString() + "\n";
-    res += "Line Length:  " + to_string(Length());
-    return res;
+    stringstream res;
+    res << "Start Point: " << p_start.ToString() << "\n";
+    res << "End Point:   " << p_end.ToString() << "\n";
+    res << "Line Length: " << Length();
+    return res.str();
 }
 
 double Line::Length() const
