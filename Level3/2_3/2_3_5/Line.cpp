@@ -70,7 +70,7 @@ string Line::ToString() const
     string res = "";
     res = "Start Point: " + p_start.ToString() + "\n";
     res += "End Point:   " + p_end.ToString() + "\n";
-    res += "Line Length:  " + to_string(Length()) + "\n";
+    res += "Line Length:  " + to_string(Length());
     return res;
 }
 
