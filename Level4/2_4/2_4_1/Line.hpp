@@ -23,8 +23,8 @@ public:
     ~Line();                        // destructor
 
     // getter and setter functions
-    Point P1() const;               // getter function for start point
-    Point P2() const;               // getter function for end point
+    const Point& P1() const;               // getter function for start point
+    const Point& P2() const;               // getter function for end point
     void P1(const Point& other);    // setter function for start point
     void P2(const Point& other);    // setter function for end point
 

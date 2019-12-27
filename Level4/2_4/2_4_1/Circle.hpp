@@ -2,7 +2,8 @@
  *  ------------------------------------------
  *  @description: header file of Circle class
  *  @author: Jiayuan Li
- *  @version: 1.0 Dec 25, 2019
+ *  @version: 1.1 Dec 25, 2019
+ *      1.1: getter return by const reference, setter using operator = 
  */
 
 #ifndef CIRCLE_HPP
@@ -25,7 +26,7 @@ public:
     void Radius(double radius);             // set the radius
 
     // getter functions
-    Point CenterPoint() const;          // get the center point of the circle
+    const Point& CenterPoint() const;          // get the center point of the circle
     double Radius() const;              // get the radius of the circle
 
     // functions returns the properties of the class

@@ -38,13 +38,13 @@ Line::~Line()
     // destructor for Line
 }
 
-Point Line::P1() const
+const Point& Line::P1() const
 {
     // return the start point
     return p_start;
 }
 
-Point Line::P2() const
+const Point& Line::P2() const
 {
     // return the end point
     return p_end;
@@ -53,15 +53,13 @@ Point Line::P2() const
 void Line::P1(const Point& other)
 {
     // setter function for start point
-    p_start.X(other.X());
-    p_start.Y(other.Y());
+    p_start = other;
 }
 
 void Line::P2(const Point& other)
 {
     // setter function for end point
-    p_end.X(other.X());
-    p_end.Y(other.Y());
+    p_end = other;
 }
 
 string Line::ToString() const

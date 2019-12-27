@@ -38,7 +38,7 @@ Circle::~Circle()
 void Circle::CenterPoint(const Point& other)
 {
     // setter for center point
-    p_center = Point(other);
+    p_center = other;
 }
 
 void Circle::Radius(double radius)
@@ -47,7 +47,7 @@ void Circle::Radius(double radius)
     m_radius = radius;
 }
 
-Point Circle::CenterPoint() const
+const Point& Circle::CenterPoint() const
 {
     // return center point
     return p_center;
