@@ -2,7 +2,8 @@
  *  ------------------------------------------
  *  @description: header file of Line class
  *  @author: Jiayuan Li
- *  @version: 1.0 Dec 25, 2019
+ *  @version: 1.1 Dec 27, 2019
+ *      1.1 getter function returning const reference, add assign operator
  */
 
 #ifndef LINE_HPP
@@ -31,6 +32,8 @@ public:
     // functions return the properties of the line
     string ToString() const;        // returns description of the line
     double Length() const;          // returns the length of the line
+
+    Line& operator = (const Line& source);
 
 private:
     // start point and end point

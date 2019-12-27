@@ -77,3 +77,17 @@ double Line::Length() const
     // return the dist from start point to the end point
     return p_start.Distance(p_end);
 }
+
+Line& Line::operator = (const Line& source)
+{
+    // avoid self copying
+    if (this == &source)
+    {
+        return *this;
+    }
+    // copy start and end point
+    p_start = source.P1();
+    p_end = source.P2();
+
+    return *this;
+}

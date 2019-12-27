@@ -86,3 +86,16 @@ string Circle::ToString() const
     res << "radius: " << m_radius << "\n";
     return res.str();
 }
+
+Circle& Circle::operator = (const Circle& source)
+{
+    // avoid self copying
+    if (this == &source)
+    {
+        return *this;
+    }
+
+    p_center = source.CenterPoint();
+    m_radius = source.Radius();
+    return *this;
+}

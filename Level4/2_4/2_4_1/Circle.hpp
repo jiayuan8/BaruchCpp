@@ -3,7 +3,7 @@
  *  @description: header file of Circle class
  *  @author: Jiayuan Li
  *  @version: 1.1 Dec 27, 2019
- *      1.1: getter return by const reference, setter using operator = 
+ *      1.1: getter return by const reference, add assign operator
  */
 
 #ifndef CIRCLE_HPP
@@ -36,6 +36,9 @@ public:
     
     // function returns the description of the circle
     string ToString() const;            // return the description of the circle
+
+    // operator overloading
+    Circle& operator = (const Circle& source);
 
 private:
     Point p_center;
