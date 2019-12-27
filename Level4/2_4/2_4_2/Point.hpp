@@ -11,6 +11,7 @@
 
 #include <iostream>
 using std::string;
+using std::ostream;
 
 class Point
 {
@@ -61,5 +62,7 @@ inline double Point::Y() const
 {
     return m_y;
 }
+
+ostream& operator << (ostream& os, const Point& p);
 
 #endif

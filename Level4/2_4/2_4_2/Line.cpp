@@ -10,6 +10,7 @@
 
 using std::string;
 using std::stringstream;
+using std::endl;
 
 Line::Line()
 {
@@ -66,9 +67,8 @@ string Line::ToString() const
 {
     // print the start point, end point and the length of the line
     stringstream res;
-    res << "Start Point: " << p_start.ToString() << "\n";
-    res << "End Point:   " << p_end.ToString() << "\n";
-    res << "Line Length: " << Length();
+    res << "[Start Point: " << p_start.ToString();
+    res << ", End Point: " << p_end.ToString() << "]";
     return res.str();
 }
 
@@ -90,4 +90,10 @@ Line& Line::operator = (const Line& source)
     p_end = source.P2();
 
     return *this;
+}
+
+ostream& operator << (ostream& os, const Line& l)
+{
+    os << l.ToString() << endl;
+    return os;
 }

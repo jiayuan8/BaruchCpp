@@ -13,6 +13,7 @@
 #include "Point.hpp"
 
 using std::string;
+using std::ostream;
 
 class Circle{
 public:
@@ -45,5 +46,7 @@ private:
     double m_radius;
 
 };
+
+ostream& operator << (ostream & os, const Circle& c);
 
 #endif

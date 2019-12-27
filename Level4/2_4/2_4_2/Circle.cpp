@@ -11,6 +11,7 @@
 #include <sstream>
 #include <cmath>
 
+using std::endl;
 using std::stringstream;
 
 Circle::Circle(): p_center(Point(0, 0)), m_radius(1)
@@ -81,9 +82,8 @@ string Circle::ToString() const
 {
     // return the description
     stringstream res;
-    res << "Circle info: \n";
-    res << "center point: " << p_center.ToString() << "\n";
-    res << "radius: " << m_radius << "\n";
+    res << "[Center Point: " << p_center.ToString();
+    res << ", Radius: " << m_radius << "]";
     return res.str();
 }
 
@@ -98,4 +98,10 @@ Circle& Circle::operator = (const Circle& source)
     p_center = source.CenterPoint();
     m_radius = source.Radius();
     return *this;
+}
+
+ostream& operator << (ostream& os, const Circle& c)
+{
+    os << c.ToString() << endl;
+    return os;
 }

@@ -13,6 +13,7 @@
 #include "Point.hpp"
 
 using std::string;
+using std::ostream;
 
 class Line
 {
@@ -40,5 +41,7 @@ private:
     Point p_start;
     Point p_end;
 };
+
+ostream& operator << (ostream & os, const Line& l);
 
 #endif
