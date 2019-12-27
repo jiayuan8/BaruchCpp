@@ -18,6 +18,7 @@ int main()
     Point test_point_1 = Point(1, 1);
     Point test_point_2 = Point(0, 0);
 
+    cout << "----------------test for Point----------------\n";
     cout << "point a: " << test_point_1.ToString() << endl;
     cout << "point b: " << test_point_2.ToString() << endl;
     cout << "test case 1 -- -a    : " << (- test_point_1).ToString() << endl;
