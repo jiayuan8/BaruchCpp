@@ -7,6 +7,8 @@
 
 #include <iostream>
 #include "Point.hpp"
+#include "Circle.hpp"
+#include "Line.hpp"
 
 using std::cout;
 using std::cin;
@@ -29,6 +31,24 @@ int main()
     test_point_2 = test_point_1;
     cout << "test case 6 -- b = a : " << test_point_2.ToString() << endl;
     cout << "test case 7 -- a *= 2: " << (test_point_1 *= 2).ToString() << endl;
+
+    Circle test_circle_1 = Circle();
+    Circle test_circle_2 = Circle(Point(2,5), 7);
+    cout << "----------------test for Circle----------------\n";
+    cout << "***circle a: \n" << test_circle_1.ToString() << endl;
+    cout << "***circle b: \n" << test_circle_2.ToString() << endl;
+    test_circle_1 = test_circle_2;
+    cout << "***circle a (after assign): \n" << test_circle_1.ToString() << endl;
+    cout << "***circle b (after assign): \n" << test_circle_2.ToString() << endl;
+
+    Line test_line_1 = Line();
+    Line test_line_2 = Line(Point(2.33, 2.33), Point(6.66, 6.66));
+    cout << "----------------test for Circle----------------\n";
+    cout << "***line a: \n" << test_line_1.ToString() << endl;
+    cout << "***line b: \n" << test_line_2.ToString() << endl;
+    test_line_1 = test_line_2;
+    cout << "***line a (after assign): \n" << test_line_1.ToString() << endl;
+    cout << "***line b (after assign): \n" << test_line_2.ToString() << endl;
 
     return 0;
 }
