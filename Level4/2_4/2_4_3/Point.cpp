@@ -51,6 +51,11 @@ Point::Point(double x, double y)
     m_y = y;
 }
 
+Point::Point(double x): m_x(x), m_y(x)
+{
+    // constructor
+}
+
 Point::Point(const Point& other)
 {
     // cout << "***The copy constructor has been called!***" << endl;

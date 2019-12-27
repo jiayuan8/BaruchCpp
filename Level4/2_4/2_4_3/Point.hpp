@@ -37,6 +37,7 @@ public:
     double Distance(const Point& p) const;  // calculate the distance between two points
 
     Point(double x, double y);  // new constructor
+    explicit Point(double x);   // explicit constructor
     Point(const Point& other);  // copy constructor
 
     // operator overloading

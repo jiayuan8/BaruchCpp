@@ -7,8 +7,6 @@
 
 #include <iostream>
 #include "Point.hpp"
-#include "Circle.hpp"
-#include "Line.hpp"
 
 using std::cout;
 using std::cin;
@@ -17,17 +15,18 @@ using std::string;
 
 int main()
 {
-    Point test_point_1 = Point(1, 1);
-    cout << "----------------test for Point----------------\n";
-    cout << "point a: " << test_point_1 << endl;
+    // *** compiler error ***
+    // Point p(1.0, 1.0);
+    // if (p == 1.0) 
+    //     cout<<"Equal!"<<endl; 
+    // else 
+    //     cout<<"Not equal"<<endl;
 
-    Circle test_circle_2 = Circle(Point(2,5), 7);
-    cout << "----------------test for Circle----------------\n";
-    cout << "circle a: " << test_circle_2 << endl;
-
-    Line test_line_2 = Line(Point(2.33, 2.33), Point(6.66, 6.66));
-    cout << "----------------test for Circle----------------\n";
-    cout << "line a: " << test_line_2 << endl;
+    Point p(1.0, 1.0);
+    if (p == (Point)1.0) 
+        cout<<"Equal!"<<endl; 
+    else 
+        cout<<"Not equal"<<endl;
 
     return 0;
 }
