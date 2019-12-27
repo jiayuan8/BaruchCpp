@@ -2,7 +2,7 @@
  *  ------------------------------------------
  *  @description: header file of Circle class
  *  @author: Jiayuan Li
- *  @version: 1.1 Dec 25, 2019
+ *  @version: 1.1 Dec 27, 2019
  *      1.1: getter return by const reference, setter using operator = 
  */
 
