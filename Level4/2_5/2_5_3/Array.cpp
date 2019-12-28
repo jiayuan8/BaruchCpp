@@ -27,7 +27,7 @@ Array::Array(const Array& other): m_data(new Point[other.Size()]), arr_size(othe
     // copy constructor
     for (size_t i = 0; i < other.Size(); i++)
     {
-        m_data[i] = other.m_data[i];
+        m_data[i] = other[i];
     }
 }
 
@@ -42,19 +42,19 @@ size_t Array::Size() const
     return arr_size;
 }
 
-void Array::SetElement(size_t index, const Point& element) const
+Point& Array::operator [] (int index)
 {
-    // check if the index is out of bound
     if (index >= arr_size)
     {
-        return;
+        return m_data[0];
     }
-    m_data[index] = element;
+    return m_data[index];
 }
 
-const Point& Array::GetElement(size_t index) const
+const Point& Array::operator [] (int index) const
 {
-    // if the index is out of bound, return the first element
+    // this allows us to call for [] for a const object in a const function
+    // read only, cannot write
     if (index >= arr_size)
     {
         return m_data[0];
@@ -78,24 +78,24 @@ Array& Array::operator = (const Array& source)
     m_data = new Point[arr_size];
     for (size_t i = 0; i < arr_size; i++)
     {
-        m_data[i] = source.m_data[i];
+        m_data[i] = source[i];
     }
     return *this;
 }
 
-Point& Array::operator [] (int index)
+void Array::SetElement(size_t index, const Point& element) const
 {
+    // check if the index is out of bound
     if (index >= arr_size)
     {
-        return m_data[0];
+        return;
     }
-    return m_data[index];
+    m_data[index] = element;
 }
 
-const Point& Array::operator [] (int index) const
+const Point& Array::GetElement(size_t index) const
 {
-    // this allows us to call for [] for a const object in a const function
-    // read only, cannot write
+    // if the index is out of bound, return the first element
     if (index >= arr_size)
     {
         return m_data[0];
