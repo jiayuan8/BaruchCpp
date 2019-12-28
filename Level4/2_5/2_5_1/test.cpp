@@ -2,12 +2,11 @@
  *  ------------------------------------------
  *  @description: test file for class Point
  *  @author: Jiayuan Li
- *  @version: 1.0 Dec 25, 2019
+ *  @version: 1.0 Dec 27, 2019
  */
 
 #include <iostream>
 #include "Point.hpp"
-#include "Line.hpp"
 
 using std::cout;
 using std::cin;
@@ -16,13 +15,33 @@ using std::string;
 
 int main()
 {
-    Point test_point_1 = Point(1, 1);
-    cout << "----------------test for Point----------------\n";
-    cout << "point a: " << test_point_1 << endl;
+    // use new to create elements on heap
+    Point* p1 = new Point();
+    Point* p2 = new Point(*p1);
+    Point* p3 = new Point(2, 4);
 
-    Line test_line_2 = Line(Point(2.33, 2.33), Point(6.66, 6.66));
-    cout << "----------------test for Line----------------\n";
-    cout << "line a: " << test_line_2 << endl;
+    // use pointers to call member function
+    cout << "point p3      : " << *p3 << endl;
+    cout << "dist to origin: " << p3->Distance() << endl;
+
+    // use delete to clear the elements on the heap
+    delete p1;
+    delete p2;
+    delete p3;
+
+    // ask the user to enter the size of array
+    int arr_size;       // size of array
+    cout << "please input the size of array(>0): ";
+    cin >> arr_size;
+    
+    // compiler error
+    // Point a[arr_size];
+
+    Point *p_arr = new Point[arr_size]; // the default constructor is the only option
+    
+    // use delete to delete arr on the heap
+    delete[] p_arr;
+
 
     return 0;
 }
