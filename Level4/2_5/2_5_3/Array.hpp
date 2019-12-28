@@ -29,7 +29,7 @@ public:
      
 private:
     Point* m_data;          // pointer pointing to the data
-    size_t arr_size;        // size of array
+    size_t m_size;        // size of array
 };
 
 #endif

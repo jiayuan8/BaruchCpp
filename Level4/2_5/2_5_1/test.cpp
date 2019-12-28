@@ -30,14 +30,14 @@ int main()
     delete p3;
 
     // ask the user to enter the size of array
-    int arr_size;       // size of array
+    int m_size;       // size of array
     cout << "please input the size of array(>0): ";
-    cin >> arr_size;
+    cin >> m_size;
     
     // compiler error
-    // Point a[arr_size];
+    // Point a[m_size];
 
-    Point *p_arr = new Point[arr_size]; // the default constructor is the only option
+    Point *p_arr = new Point[m_size]; // the default constructor is the only option
     
     // use delete to delete arr on the heap
     delete[] p_arr;
