@@ -6,7 +6,7 @@
  */
 
 #include <iostream>
-#include "Point.hpp"
+#include "Array.hpp"
 
 using std::cout;
 using std::cin;
@@ -14,28 +14,44 @@ using std::endl;
 
 int main()
 {
-    // create an array of pointers to pointer to points
-    Point** pointer_arr = new Point*[3];
+    // test for constructors and Size()
+    Array test_array_1;
+    Array test_array_2(20);
+    Array test_array_3(test_array_1);
+    cout << "array 1: " << test_array_1.Size() << endl;
+    cout << "array 2: " << test_array_2.Size() << endl;
+    cout << "array 3: " << test_array_3.Size() << endl;
+
+    // test for [] overloading
+    for (size_t i = 0; i < 10; i++)
+    {
+        test_array_1[i] = Point(i);
+    }
+    cout << "array 1: ";
+    for (size_t i = 0; i < 10; i++)
+    {
+        cout << test_array_1[i] << " ";
+    }
+    cout << endl;
+
+    // test for = overloading and GetElement()
+    test_array_2 = test_array_1;
+    cout << "array 2: ";
+    for (size_t i = 0; i < 10; i++)
+    {
+        cout << test_array_2.GetElement(i) << " ";
+    }
+    cout << endl;
+
+    // test for SetElement()
+    test_array_3.SetElement(0, Point(1.1, 1.1));
+    test_array_3.SetElement(1, Point(2.2, 2.2));
+    cout << endl;
+    for (size_t i = 0; i < 2; i++)
+    {
+        cout << test_array_3.GetElement(i) << " ";
+    }
+    cout << endl;
     
-    // iterate through array
-    pointer_arr[0] = new Point();
-    pointer_arr[1] = new Point(1, 1);
-    pointer_arr[2] = new Point(*pointer_arr[1]);
-
-    // print all the point
-    for (int i = 0; i < 3; i++) 
-    {
-        cout << *pointer_arr[i] << endl;
-    }
-
-    // delete all the point
-    for (int i = 0; i < 3; i++) 
-    {
-        delete pointer_arr[i];
-    }
-
-    // delete the array of pointers
-    delete[] pointer_arr;
-
     return 0;
 }
