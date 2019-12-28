@@ -42,6 +42,5 @@ int main()
     // use delete to delete arr on the heap
     delete[] p_arr;
 
-
     return 0;
 }
