@@ -35,6 +35,8 @@ public:
 
     Line& operator = (const Line& source);
 
+    friend ostream& operator << (ostream & os, const Line& l);
+
 private:
     // start point and end point
     Point p_start;

@@ -26,7 +26,7 @@ int main()
     cout << "circle a: " << test_circle_2 << endl;
 
     Line test_line_2 = Line(Point(2.33, 2.33), Point(6.66, 6.66));
-    cout << "----------------test for Circle----------------\n";
+    cout << "----------------test for Line----------------\n";
     cout << "line a: " << test_line_2 << endl;
 
     return 0;
