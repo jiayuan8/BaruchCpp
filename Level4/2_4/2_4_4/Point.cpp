@@ -97,3 +97,9 @@ Point& Point::operator *= (double factor)
     m_y *= factor;
     return *this;
 }
+
+ostream& operator << (ostream& os, const Point& p)
+{
+    os << p.ToString() << endl;
+    return os;
+}

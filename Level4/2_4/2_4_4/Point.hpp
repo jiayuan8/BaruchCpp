@@ -10,6 +10,8 @@
 #define POINT_H
 
 #include <iostream>
+
+using std::ostream;
 using std::string;
 
 class Point
@@ -45,6 +47,8 @@ public:
     bool operator == (const Point& p) const;    // Equally compare operator.
     Point& operator = (const Point& source);    // Assignment operator.
     Point& operator *= (double factor);         // Scale the coordinates & assign.
+
+    friend ostream& operator << (ostream& os, const Point& p);
 
 private:
     double m_x;         // the x coordinate of the point
