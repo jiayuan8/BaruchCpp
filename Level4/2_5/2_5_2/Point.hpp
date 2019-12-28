@@ -48,6 +48,8 @@ public:
     Point& operator = (const Point& source);    // Assignment operator.
     Point& operator *= (double factor);         // Scale the coordinates & assign.
 
+    friend ostream& operator << (ostream& os, const Point& p);
+
 private:
     double m_x;         // the x coordinate of the point
     double m_y;         // the y coordinate of the point
@@ -63,7 +65,5 @@ inline double Point::Y() const
 {
     return m_y;
 }
-
-ostream& operator << (ostream& os, const Point& p);
 
 #endif
