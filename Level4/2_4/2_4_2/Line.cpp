@@ -94,6 +94,6 @@ Line& Line::operator = (const Line& source)
 
 ostream& operator << (ostream& os, const Line& l)
 {
-    os << l.ToString() << endl;
+    os << l.ToString();
     return os;
 }

@@ -100,6 +100,6 @@ Point& Point::operator *= (double factor)
 
 ostream& operator << (ostream& os, const Point& p)
 {
-    os << p.ToString() << endl;
+    os << p.ToString();
     return os;
 }

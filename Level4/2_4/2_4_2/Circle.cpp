@@ -102,6 +102,6 @@ Circle& Circle::operator = (const Circle& source)
 
 ostream& operator << (ostream& os, const Circle& c)
 {
-    os << c.ToString() << endl;
+    os << c.ToString();
     return os;
 }
