@@ -15,38 +15,44 @@
 using std::string;
 using std::ostream;
 
-class Circle{
-public:
-    Circle();                       // default constructor
-    Circle(const Point& center, double radius);     // constructor with point the radius
-    Circle(const Circle& other);    // copy constructor
-    ~Circle();                      // destructor
+namespace JIAYUAN
+{
+    namespace CAD
+    {
+        class Circle{
+        public:
+            Circle();                       // default constructor
+            Circle(const Point& center, double radius);     // constructor with point the radius
+            Circle(const Circle& other);    // copy constructor
+            ~Circle();                      // destructor
 
-    // setter functions
-    void CenterPoint(const Point& other);   // set the center point
-    void Radius(double radius);             // set the radius
+            // setter functions
+            void CenterPoint(const Point& other);   // set the center point
+            void Radius(double radius);             // set the radius
 
-    // getter functions
-    const Point& CenterPoint() const;          // get the center point of the circle
-    double Radius() const;              // get the radius of the circle
+            // getter functions
+            const Point& CenterPoint() const;          // get the center point of the circle
+            double Radius() const;              // get the radius of the circle
 
-    // functions returns the properties of the class
-    double Diameter() const;            // get the diameter of the circle
-    double Area() const;                // get the area of the circle
-    double Circumference() const;       // get the circumference of the circle
-    
-    // function returns the description of the circle
-    string ToString() const;            // return the description of the circle
+            // functions returns the properties of the class
+            double Diameter() const;            // get the diameter of the circle
+            double Area() const;                // get the area of the circle
+            double Circumference() const;       // get the circumference of the circle
+            
+            // function returns the description of the circle
+            string ToString() const;            // return the description of the circle
 
-    // operator overloading
-    Circle& operator = (const Circle& source);
+            // operator overloading
+            Circle& operator = (const Circle& source);
 
-private:
-    Point p_center;
-    double m_radius;
+            friend ostream& operator << (ostream & os, const Circle& c);
 
-};
+        private:
+            Point p_center;
+            double m_radius;
 
-ostream& operator << (ostream & os, const Circle& c);
+        };
+    }
+}
 
 #endif
