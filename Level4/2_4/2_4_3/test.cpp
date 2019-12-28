@@ -11,11 +11,10 @@
 using std::cout;
 using std::cin;
 using std::endl;
-using std::string;
 
 int main()
 {
-    // *** compiler error ***
+    // *** compiler error when declare explicit ***
     // Point p(1.0, 1.0);
     // if (p == 1.0) 
     //     cout<<"Equal!"<<endl; 
