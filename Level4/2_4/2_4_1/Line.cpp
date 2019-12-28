@@ -66,9 +66,8 @@ string Line::ToString() const
 {
     // print the start point, end point and the length of the line
     stringstream res;
-    res << "Start Point: " << p_start.ToString() << "\n";
-    res << "End Point:   " << p_end.ToString() << "\n";
-    res << "Line Length: " << Length();
+    res << "[Start Point: " << p_start.ToString();
+    res << ", End Point: " << p_end.ToString() << "]";
     return res.str();
 }
 

@@ -43,7 +43,7 @@ int main()
 
     Line test_line_1 = Line();
     Line test_line_2 = Line(Point(2.33, 2.33), Point(6.66, 6.66));
-    cout << "----------------test for Circle----------------\n";
+    cout << "----------------test for Line----------------\n";
     cout << "***line a: \n" << test_line_1.ToString() << endl;
     cout << "***line b: \n" << test_line_2.ToString() << endl;
     test_line_1 = test_line_2;
