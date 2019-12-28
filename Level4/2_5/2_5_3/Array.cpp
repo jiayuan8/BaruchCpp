@@ -53,7 +53,7 @@ Point& Array::operator [] (int index)
 
 const Point& Array::operator [] (int index) const
 {
-    // this allows us to call for [] for a const object in a const function
+    // this allows us to call for [] for a const object or in a const function
     // read only, cannot write
     if (index >= m_size)
     {
