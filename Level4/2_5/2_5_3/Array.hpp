@@ -19,13 +19,13 @@ public:
     Array(const Array& other);  // copy constructor
     ~Array();               // destructor
 
+    Point& operator [] (int index);                 // overloading assign operator, allow write
+    const Point& operator [] (int index) const;     // overloding the [] operator
+    Array& operator = (const Array& source);        // overloading assign operator
+
     size_t Size() const;    // return the size of the arr
     void SetElement(size_t index, const Point& element) const;  // set the element of the array
     const Point& GetElement(size_t index) const;    // return the element of the array given the index
-    
-    Array& operator = (const Array& source);        // overloading assign operator
-    Point& operator [] (int index);                 // overloading assign operator, allow write
-    const Point& operator [] (int index) const;     // overloding the [] operator
      
 private:
     Point* m_data;          // pointer pointing to the data
