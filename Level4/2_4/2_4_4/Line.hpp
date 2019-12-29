@@ -2,8 +2,9 @@
  *  ------------------------------------------
  *  @description: header file of Line class
  *  @author: Jiayuan Li
- *  @version: 1.1 Dec 27, 2019
+ *  @version: 1.2 Dec 29, 2019
  *      1.1 getter function returning const reference, add assign operator
+ *      1.2 friend function can access private member directly
  */
 
 #ifndef LINE_HPP

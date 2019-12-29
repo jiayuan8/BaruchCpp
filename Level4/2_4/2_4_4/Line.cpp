@@ -94,6 +94,7 @@ Line& Line::operator = (const Line& source)
 
 ostream& operator << (ostream& os, const Line& l)
 {
-    os << l.ToString();
+    os << "[Start Point: " << l.p_start;
+    os << ", End Point: " << l.p_end << "]";
     return os;
 }
