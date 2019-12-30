@@ -29,6 +29,7 @@ namespace JIAYUAN
             virtual std::string ToString() const;   // return the description of the class
             int ID() const;             // return the id of the class
             virtual void Draw() const = 0;    // pure virtual function
+            void Print() const;         // print function
 
         private:
             int m_id;       // data member for id

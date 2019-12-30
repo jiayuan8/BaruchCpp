@@ -55,5 +55,11 @@ namespace JIAYUAN
         {
             return m_id;
         }
+
+        void Shape::Print() const
+        {
+            std::cout << ToString();
+            return;
+        }
     }
 }
