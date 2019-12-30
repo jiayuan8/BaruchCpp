@@ -8,7 +8,6 @@
 #include <iostream>
 #include "Point.hpp"
 #include "Line.hpp"
-#include "Circle.hpp"
 
 using std::cout;
 using std::cin;

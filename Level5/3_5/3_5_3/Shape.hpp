@@ -22,7 +22,7 @@ namespace JIAYUAN
         public:
             Shape();                    // default constructor
             Shape(const Shape& other);  // copy constructor
-            ~Shape();           // destructor
+            virtual ~Shape();           // destructor
 
             Shape& operator = (const Shape& other); // overloading assign operator
 
