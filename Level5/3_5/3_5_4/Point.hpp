@@ -27,24 +27,16 @@ namespace JIAYUAN
             ~Point();           // destruntor
             double X() const;   // function returns x coordinate of the point
             double Y() const;   // function returns y coordinate of the point
-            
-            void X(double new_x) 
-            { // function set x coordinate of the point
-                m_x = new_x;
-            }
-            void Y(double new_y)
-            { // function set y coordinate of the point
-                m_y = new_y;
-            }
-            
-            string ToString() const; // function that return a description of the point
-
-            double Distance() const; // calculate the distance to origin
-            double Distance(const Point& p) const;  // calculate the distance between two points
-
             Point(double x, double y);  // new constructor
             explicit Point(double x);   // explicit constructor
             Point(const Point& other);  // copy constructor
+            
+            void X(double new_x) { m_x = new_x; }
+            void Y(double new_y) { m_y = new_y; }
+            
+            string ToString() const; // function that return a description of the point
+            double Distance() const; // calculate the distance to origin
+            double Distance(const Point& p) const;  // calculate the distance between two points
 
             // operator overloading
             Point operator - () const;                  // Negate the coordinates.
