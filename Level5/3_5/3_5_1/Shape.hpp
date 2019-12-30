@@ -2,8 +2,9 @@
  *  ------------------------------------------
  *  @description: header file of Shape class
  *  @author: Jiayuan Li
- *  @version: 3.4.2 Dec 29, 2019
+ *  @version: 3.4.3 Dec 29, 2019
  *      3.4.2: implementing shape class
+ *      3.4.3: declare to ToString to virtual
  */
 
 #ifndef SHAPE_HPP
@@ -25,7 +26,7 @@ namespace JIAYUAN
 
             Shape& operator = (const Shape& other); // overloading assign operator
 
-            std::string ToString() const;   // return the description of the class
+            virtual std::string ToString() const;   // return the description of the class
             int ID() const;             // return the id of the class
 
         private:

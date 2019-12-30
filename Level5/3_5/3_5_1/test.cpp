@@ -15,20 +15,13 @@ using namespace JIAYUAN::CAD;
 
 int main()
 {
-    Shape s;
     Point p(10, 20);
-
-    cout<<s.ToString()<<endl; 
-    cout<<p.ToString()<<endl; 
-
-    cout<<"Shape ID: "<<s.ID()<<endl; 
-    cout<<"Point ID: "<<p.ID()<<endl; 
 
     Shape* sp;
     sp=&p; 
     cout<<sp->ToString()<<endl;
     /* Q: What is printed? */
-    /* A: "ID: 282475249" is printed. It calls the ToString() in Shape class */
+    /* A: "Point(10, 20)" is printed. It calls the ToString() in Point class */
 
     return 0;
 }
