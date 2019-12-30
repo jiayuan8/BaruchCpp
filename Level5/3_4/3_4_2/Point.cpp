@@ -89,7 +89,6 @@ namespace JIAYUAN
         Point& Point::operator = (const Point& source)
         {
             // avoid doing assign to itself
-            cout << "***The assignment for Point has been called!***" << endl;
             if (this == &source)
             {
                 return *this;
