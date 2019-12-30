@@ -18,7 +18,8 @@ namespace JIAYUAN
 {
     namespace CAD
     {
-        class Circle{
+        class Circle: public Shape
+        {
         public:
             Circle();                       // default constructor
             Circle(const Point& center, double radius);     // constructor with point the radius

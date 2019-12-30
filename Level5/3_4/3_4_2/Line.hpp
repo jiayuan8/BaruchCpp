@@ -10,7 +10,6 @@
 
 #include <iostream>
 #include "Point.hpp"
-#include "Shape.hpp"
 
 using std::string;
 
