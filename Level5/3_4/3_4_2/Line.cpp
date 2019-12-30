@@ -17,19 +17,19 @@ namespace JIAYUAN
     namespace CAD
     {
         Line::Line()
-            : p_start(Point(0)), p_end(Point(0))
+            : Shape(), p_start(Point(0)), p_end(Point(0))
         {
             // default constructor for Line:
         }
 
         Line::Line(const Point& start, const Point & end)
-            : p_start(Point(start)), p_end(Point(end))
+            : Shape(), p_start(Point(start)), p_end(Point(end))
         {
             // constructor for Line
         }
 
         Line::Line(const Line& other)
-            : p_start(other.p_start), p_end(other.p_end)
+            : Shape(other), p_start(other.p_start), p_end(other.p_end)
         {
             // copy constructor for Line
         }

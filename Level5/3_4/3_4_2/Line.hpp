@@ -10,6 +10,7 @@
 
 #include <iostream>
 #include "Point.hpp"
+#include "Shape.hpp"
 
 using std::string;
 
@@ -17,7 +18,7 @@ namespace JIAYUAN
 {
     namespace CAD
     {
-        class Line
+        class Line: public Shape
         {
         public:
             // constructors and destructor
