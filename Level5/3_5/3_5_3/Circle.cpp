@@ -40,6 +40,7 @@ namespace JIAYUAN
         Circle::~Circle()
         {
             // destructor
+            std::cout << "*** The destructor for circle has been called ***" << std::endl;
         }
 
         void Circle::CenterPoint(const Point& other)

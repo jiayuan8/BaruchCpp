@@ -9,8 +9,6 @@
 #include <sstream>
 #include <cmath>
 
-using std::cout;
-using std::endl;
 using std::stringstream;
 using std::sqrt;
 
@@ -45,6 +43,7 @@ namespace JIAYUAN
         Point::~Point()
         {
             // destructor
+            std::cout << "*** The destructor for point has been called ***" << std::endl;
         }
 
         string Point::ToString() const

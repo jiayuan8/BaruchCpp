@@ -37,6 +37,7 @@ namespace JIAYUAN
         Line::~Line()
         {
             // destructor for Line
+            std::cout << "*** The destructor for line has been called ***" << std::endl;
         }
 
         const Point& Line::P1() const
