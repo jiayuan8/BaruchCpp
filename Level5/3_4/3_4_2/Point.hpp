@@ -2,13 +2,16 @@
  *  ------------------------------------------
  *  @description: header file of Point class, implement const function
  *  @author: Jiayuan Li
- *  @version: 3.4.1 Dec 29, 2019
+ *  @version: 3.4.2 Dec 29, 2019
+ *      3.4.1: colon syntex
+ *      3.4.2: add inheritence
  */
 
 #ifndef POINT_H
 #define POINT_H
 
 #include <iostream>
+#include "Shape.hpp"
 using std::string;
 using std::ostream;
 
@@ -16,7 +19,7 @@ namespace JIAYUAN
 {
     namespace CAD
     {
-        class Point
+        class Point: public Shape
         {
         public:
 

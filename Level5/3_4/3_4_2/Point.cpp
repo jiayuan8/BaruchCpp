@@ -19,32 +19,32 @@ namespace JIAYUAN
     namespace CAD
     {
         Point::Point()
-            : m_x(0), m_y(0)
+            : Shape(), m_x(0), m_y(0)
         {
-            cout << "***The constructor for Point has been called!***" << endl;
+            // default constructor
         }
 
         Point::Point(double x, double y)
-            : m_x(x), m_y(y)
+            : Shape(), m_x(x), m_y(y)
         {
-            cout << "***The constructor for Point has been called!***" << endl;
+            // constructor with 2 parameters
         }
 
         Point::Point(double x)
-            : m_x(x), m_y(x)
+            : Shape(), m_x(x), m_y(x)
         {
-            cout << "***The constructor for Point has been called!***" << endl;
+            // constructor with 1 parameters
         }
 
         Point::Point(const Point& other)
-            : m_x(other.m_x), m_y(other.m_y)
+            : Shape(other), m_x(other.m_x), m_y(other.m_y)
         {
-            cout << "***The constructor for Point has been called!***" << endl;
+            // copy constructor
         }
 
         Point::~Point()
         {
-            cout << "***The destructor for Point has been called***" << endl;
+            // destructor
         }
 
         string Point::ToString() const
