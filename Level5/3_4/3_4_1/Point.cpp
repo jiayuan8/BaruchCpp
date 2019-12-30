@@ -2,7 +2,7 @@
  *  ------------------------------------------
  *  @description: source file of Point class
  *  @author: Jiayuan Li
- *  @version: 1.0 Dec 27, 2019
+ *  @version: 3.4.1 Dec 29, 2019
  */
 
 #include "Point.hpp"

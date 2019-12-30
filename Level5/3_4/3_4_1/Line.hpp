@@ -2,8 +2,7 @@
  *  ------------------------------------------
  *  @description: header file of Line class
  *  @author: Jiayuan Li
- *  @version: 1.1 Dec 27, 2019
- *      1.1 getter function returning const reference, add assign operator
+ *  @version: 3.4.1 Dec 29, 2019
  */
 
 #ifndef LINE_HPP

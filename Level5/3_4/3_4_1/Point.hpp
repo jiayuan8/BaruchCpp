@@ -2,8 +2,7 @@
  *  ------------------------------------------
  *  @description: header file of Point class, implement const function
  *  @author: Jiayuan Li
- *  @version: 1.1 Dec 25, 2019
- *      1.1: line getter return by reference, setter set the entire object
+ *  @version: 3.4.1 Dec 29, 2019
  */
 
 #ifndef POINT_H

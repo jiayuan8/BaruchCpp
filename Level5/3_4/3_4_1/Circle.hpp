@@ -2,8 +2,7 @@
  *  ------------------------------------------
  *  @description: header file of Circle class
  *  @author: Jiayuan Li
- *  @version: 1.1 Dec 27, 2019
- *      1.1: getter return by const reference, add assign operator
+ *  @version: 3.4.1 Dec 29, 2019
  */
 
 #ifndef CIRCLE_HPP
