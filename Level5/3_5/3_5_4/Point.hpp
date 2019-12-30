@@ -23,17 +23,20 @@ namespace JIAYUAN
         {
         public:
 
+            // constructors and destructors
             Point();            // constructor
-            ~Point();           // destruntor
-            double X() const;   // function returns x coordinate of the point
-            double Y() const;   // function returns y coordinate of the point
             Point(double x, double y);  // new constructor
             explicit Point(double x);   // explicit constructor
             Point(const Point& other);  // copy constructor
+            ~Point();           // destruntor
+
+            // getter and setter functions
+            double X() const { return m_x; }   // function returns x coordinate of the point
+            double Y() const { return m_y; }   // function returns y coordinate of the point
+            void X(double new_x) { m_x = new_x; }   // inline function setting x
+            void Y(double new_y) { m_y = new_y; }   // inline function setting y
             
-            void X(double new_x) { m_x = new_x; }
-            void Y(double new_y) { m_y = new_y; }
-            
+            // other member functions
             string ToString() const; // function that return a description of the point
             double Distance() const; // calculate the distance to origin
             double Distance(const Point& p) const;  // calculate the distance between two points
@@ -45,7 +48,9 @@ namespace JIAYUAN
             bool operator == (const Point& p) const;    // Equally compare operator.
             Point& operator = (const Point& source);    // Assignment operator.
             Point& operator *= (double factor);         // Scale the coordinates & assign.
+            void Draw() const;
 
+            // friend functions
             friend ostream& operator << (ostream& os, const Point& p);
 
         private:
@@ -53,9 +58,6 @@ namespace JIAYUAN
             double m_y;         // the y coordinate of the point
             
         };
-
-        inline double Point::X() const { return m_x; }
-        inline double Point::Y() const { return m_y; }
     }
 }
 

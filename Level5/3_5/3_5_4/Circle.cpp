@@ -94,6 +94,11 @@ namespace JIAYUAN
             return res.str();
         }
 
+        void Circle::Draw() const
+        {
+            std::cout << "*** Drawing ***" << ToString() << std::endl;
+        }
+
         Circle& Circle::operator = (const Circle& source)
         {
             // avoid self copying

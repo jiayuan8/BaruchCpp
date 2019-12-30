@@ -43,7 +43,7 @@ namespace JIAYUAN
         Point::~Point()
         {
             // destructor
-            std::cout << "*** The destructor for point has been called ***" << std::endl;
+            // std::cout << "*** The destructor for point has been called ***" << std::endl;
         }
 
         string Point::ToString() const
@@ -64,6 +64,11 @@ namespace JIAYUAN
             double x_rel = m_x - p.m_x; // relative distance of x
             double y_rel = m_y - p.m_y; // relative distance of y
             return sqrt(y_rel * y_rel + x_rel * x_rel);
+        }
+
+        void Point::Draw() const
+        {
+            std::cout << "*** Drawing ***" << ToString() << std::endl;
         }
 
         Point Point::operator - () const

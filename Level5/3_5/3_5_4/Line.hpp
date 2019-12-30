@@ -35,6 +35,7 @@ namespace JIAYUAN
             // functions return the properties of the line
             string ToString() const;        // returns description of the line
             double Length() const;          // returns the length of the line
+            void Draw() const;
 
             Line& operator = (const Line& source);
 

@@ -41,6 +41,7 @@ namespace JIAYUAN
             
             // function returns the description of the circle
             string ToString() const;            // return the description of the circle
+            void Draw() const;
 
             // operator overloading
             Circle& operator = (const Circle& source);

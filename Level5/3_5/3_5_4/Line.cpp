@@ -37,7 +37,7 @@ namespace JIAYUAN
         Line::~Line()
         {
             // destructor for Line
-            std::cout << "*** The destructor for line has been called ***" << std::endl;
+            // std::cout << "*** The destructor for line has been called ***" << std::endl;
         }
 
         const Point& Line::P1() const
@@ -78,6 +78,11 @@ namespace JIAYUAN
         {
             // return the dist from start point to the end point
             return p_start.Distance(p_end);
+        }
+
+        void Line::Draw() const
+        {
+            std::cout << "*** Drawing ***" << ToString() << std::endl;
         }
 
         Line& Line::operator = (const Line& source)
