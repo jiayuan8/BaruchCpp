@@ -17,14 +17,17 @@ using namespace JIAYUAN::CAD;
 
 int main()
 {
-    Shape* shapes[3]; 
-    shapes[0] = new Shape; 
-    shapes[1] = new Point; 
-    shapes[2] = new Line;
-    
-    for (int i=0; i!=3; i++) 
-        delete shapes[i];
+    Shape s;
+    Point p(10, 20);
+    Line l(Point(1,2), Point(3, 4));
+    Circle c;
+
+    cout << s.ToString() << endl; 
+    cout << p.ToString() << endl; 
+    cout << l.ToString() << endl;
+    cout << c.ToString() << endl;
     /* A: Now, the ID is printed with every point, line and circle :) */
+    
 
     return 0;
 }
