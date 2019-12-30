@@ -4,7 +4,7 @@
  *  @author: Jiayuan Li
  *  @version: 3.4.3 Dec 29, 2019
  *      3.4.2: implementing shape class
- *      3.4.3: declare to ToString to virtual
+ *      3.5.1: declare to ToString to virtual
  */
 
 #ifndef SHAPE_HPP

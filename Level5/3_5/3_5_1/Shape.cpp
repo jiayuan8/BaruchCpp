@@ -2,8 +2,9 @@
  *  ------------------------------------------
  *  @description: source file of Shape class
  *  @author: Jiayuan Li
- *  @version: 3.4.2 Dec 29, 2019
+ *  @version: 3.4.3 Dec 29, 2019
  *      3.4.2: implementing shape class
+ *      3.5.1: declare to ToString to virtual
  */
 
 
