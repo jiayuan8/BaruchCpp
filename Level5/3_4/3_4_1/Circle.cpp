@@ -106,7 +106,8 @@ namespace JIAYUAN
 
         ostream& operator << (ostream& os, const Circle& c)
         {
-            os << c.ToString() << endl;
+            os << "[Center Point: " << c.p_center;
+            os << ", Radius: " << c.m_radius << "]";
             return os;
         }
     }

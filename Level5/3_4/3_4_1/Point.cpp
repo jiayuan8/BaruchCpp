@@ -9,6 +9,7 @@
 #include <sstream>
 #include <cmath>
 
+using std::cout;
 using std::endl;
 using std::stringstream;
 using std::sqrt;
@@ -17,16 +18,39 @@ namespace JIAYUAN
 {
     namespace CAD
     {
-        Point::Point(): m_x(0), m_y(0)
+        Point::Point()
         {
-            // default constructor
-            // cout << "***The default constructor has been called***" << endl;
+            cout << "***The constructor for Point has been called!***" << endl;
+            m_x = 0;
+            m_y = 0;
+        }
+
+        Point::Point(double x, double y)
+        {
+            cout << "***The constructor for Point has been called!***" << endl;
+            m_x = x;
+            m_y = y;
+    
+        }
+
+        Point::Point(double x)
+        {
+            cout << "***The constructor for Point has been called!***" << endl;
+            m_x = x;
+            m_y = x;
+        }
+
+        Point::Point(const Point& other)
+        {
+            cout << "***The constructor for Point has been called!***" << endl;
+            m_x = other.m_x;
+            m_y = other.m_y;
         }
 
         Point::~Point()
         {
             // default destructor
-            // cout << "***The default destructor has been called***" << endl;
+            cout << "***The destructor for Point has been called***" << endl;
         }
 
         string Point::ToString() const
@@ -46,25 +70,6 @@ namespace JIAYUAN
             double x_rel = m_x - p.m_x; // relative distance of x
             double y_rel = m_y - p.m_y; // relative distance of y
             return sqrt(y_rel * y_rel + x_rel * x_rel);
-        }
-
-        Point::Point(double x, double y)
-        {
-            // cout << "***The new constructor has been called!***" << endl;
-            m_x = x;
-            m_y = y;
-        }
-
-        Point::Point(double x): m_x(x), m_y(x)
-        {
-            // constructor
-        }
-
-        Point::Point(const Point& other)
-        {
-            // cout << "***The copy constructor has been called!***" << endl;
-            m_x = other.m_x;
-            m_y = other.m_y;
         }
 
         Point Point::operator - () const
@@ -90,6 +95,7 @@ namespace JIAYUAN
         Point& Point::operator = (const Point& source)
         {
             // avoid doing assign to itself
+            cout << "***The assignment for Point has been called!***" << endl;
             if (this == &source)
             {
                 return *this;
@@ -109,7 +115,7 @@ namespace JIAYUAN
 
         ostream& operator << (ostream& os, const Point& p)
         {
-            os << p.ToString();
+            os << "Point(" << p.m_x << ", " << p.m_y << + ")";
             return os;
         }
     }

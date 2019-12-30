@@ -17,25 +17,21 @@ namespace JIAYUAN
     namespace CAD
     {
         Line::Line()
+            : p_start(Point()), p_end(Point())
         {
             // default constructor for Line:
-            // set both point to 0
-            p_start = Point(0, 0);
-            p_end = Point(0, 0);
         }
 
         Line::Line(const Point& start, const Point & end)
+            : p_start(Point(start)), p_end(Point(end))
         {
             // constructor for Line
-            p_start = Point(start);
-            p_end = Point(end);
         }
 
         Line::Line(const Line& other)
+            : p_start(other.p_start), p_end(other.p_end)
         {
             // copy constructor for Line
-            p_start = Point(other.p_start);
-            p_end = Point(other.p_end);
         }
 
         Line::~Line()
@@ -98,7 +94,8 @@ namespace JIAYUAN
 
         ostream& operator << (ostream& os, const Line& l)
         {
-            os << l.ToString() << endl;
+            os << "[Start Point: " << l.p_start;
+            os << ", End Point: " << l.p_end << "]";
             return os;
         }
     }
