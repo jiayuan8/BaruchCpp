@@ -85,6 +85,10 @@ namespace JIAYUAN
             {
                 return *this;
             }
+
+            // call base class assign operator
+            Shape::operator = (source);
+            
             // copy start and end point
             p_start = source.P1();
             p_end = source.P2();

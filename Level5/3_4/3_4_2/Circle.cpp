@@ -100,6 +100,9 @@ namespace JIAYUAN
                 return *this;
             }
 
+            // call base class assign operator
+            Shape::operator = (source);
+
             p_center = source.CenterPoint();
             m_radius = source.Radius();
             return *this;

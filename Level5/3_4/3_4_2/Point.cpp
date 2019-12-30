@@ -95,6 +95,9 @@ namespace JIAYUAN
                 return *this;
             }
 
+            // call base class assign operator
+            Shape::operator = (source);
+
             m_x = source.m_x;
             m_y = source.m_y;
             return *this;
