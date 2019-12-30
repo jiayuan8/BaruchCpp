@@ -62,15 +62,8 @@ namespace JIAYUAN
             
         };
 
-        inline double Point::X() const
-        {
-            return m_x;
-        }
-
-        inline double Point::Y() const
-        {
-            return m_y;
-        }
+        inline double Point::X() const { return m_x; }
+        inline double Point::Y() const { return m_y; }
     }
 }
 

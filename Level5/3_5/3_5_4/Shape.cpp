@@ -30,6 +30,7 @@ namespace JIAYUAN
         Shape::~Shape()
         {
             // destructor
+            std::cout << "*** The destructor for shape has been called ***" << std::endl;
         }
 
         Shape& Shape::operator = (const Shape& other)
