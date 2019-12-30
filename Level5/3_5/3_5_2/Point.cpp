@@ -50,7 +50,8 @@ namespace JIAYUAN
         string Point::ToString() const
         {
             stringstream res;
-            res << "Point(" << m_x << ", " << m_y << + ")";
+            string s = Shape::ToString();
+            res << "[Point(" << m_x << ", " << m_y << + "), " << s << "]";
             return res.str();
         }
 
