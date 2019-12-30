@@ -20,6 +20,7 @@ int main()
     Line l;
     /* before implemeting colon syntax:
      * 4 constructor calls for Point class
+     *      (2 default constructor, 2 constructor by parameters)
      * 2 assignment calls for Point class
      * 4 destructor calls for Point class
      */
@@ -29,6 +30,8 @@ int main()
      * 0 assignment calls for Point class
      * 2 destructor calls for Point class
      */
+
+    /* Conclusion: the calls are less than before */
 
     return 0;
 }

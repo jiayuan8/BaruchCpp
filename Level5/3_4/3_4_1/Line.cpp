@@ -17,7 +17,7 @@ namespace JIAYUAN
     namespace CAD
     {
         Line::Line()
-            : p_start(Point()), p_end(Point())
+            : p_start(Point(0)), p_end(Point(0))
         {
             // default constructor for Line:
         }

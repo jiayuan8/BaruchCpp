@@ -18,19 +18,20 @@ namespace JIAYUAN
 {
     namespace CAD
     {
-        Circle::Circle(): p_center(Point(0, 0)), m_radius(1)
+        Circle::Circle()
+            : p_center(Point(0, 0)), m_radius(1)
         {
             // default constructor, initialize with point (0,0) and radius 1
         }
 
         Circle::Circle(const Point& center, double radius)
-        :p_center(center), m_radius(radius)
+            :p_center(center), m_radius(radius)
         {
             // constructor with parameters
         }
 
         Circle::Circle(const Circle& other)
-        :p_center(other.p_center), m_radius(other.m_radius)
+            :p_center(other.p_center), m_radius(other.m_radius)
         {
             // copy constructor
         }
