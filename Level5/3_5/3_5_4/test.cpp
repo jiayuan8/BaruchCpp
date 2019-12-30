@@ -18,13 +18,13 @@ using namespace JIAYUAN::CAD;
 int main()
 {
     /* The Draw() function in Shape needs to be pure virtual */
-    
-    // Shape test_shape;
 
     /* We cannot create an instance of Shape class, since
      * Shape is an abstract class. 
      * Doing so will result in compiler error
      */
+
+    // Shape test_shape;
 
     Shape* shapes[10];
     shapes[0] = new Line;

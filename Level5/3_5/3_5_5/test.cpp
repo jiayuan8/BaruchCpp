@@ -22,6 +22,7 @@ int main()
     Point test_point;
     Circle test_circle;
 
+    // test calling the print function
     test_line.Print();
     cout << endl;
     test_point.Print();
