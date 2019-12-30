@@ -67,8 +67,9 @@ namespace JIAYUAN
         {
             // print the start point, end point and the length of the line
             stringstream res;
+            string s = Shape::ToString();
             res << "[Start Point: " << p_start.ToString();
-            res << ", End Point: " << p_end.ToString() << "]";
+            res << ", End Point: " << p_end.ToString() << ", " << s << "]";
             return res.str();
         }
 

@@ -13,6 +13,7 @@
 
 using std::endl;
 using std::stringstream;
+using std::string;
 
 namespace JIAYUAN
 {
@@ -87,8 +88,9 @@ namespace JIAYUAN
         {
             // return the description
             stringstream res;
+            string s = Shape::ToString();
             res << "[Center Point: " << p_center.ToString();
-            res << ", Radius: " << m_radius << "]";
+            res << ", Radius: " << m_radius << ", " << s << "]";
             return res.str();
         }
 
