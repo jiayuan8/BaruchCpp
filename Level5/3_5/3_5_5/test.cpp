@@ -17,6 +17,12 @@ using namespace JIAYUAN::CAD;
 
 int main()
 {
+
+    /* 
+     * Yes, the Point() function in the Shape class prints the right 
+     * output even when Point() and Line() do not have Point function
+     */
+
     // create line and point object
     Line test_line;
     Point test_point;
