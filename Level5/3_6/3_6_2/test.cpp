@@ -8,6 +8,7 @@
 #include <iostream>
 #include "Array.hpp"
 #include "Point.hpp"
+#include "OutOfBoundsException.hpp"
 
 using std::cout;
 using std::cin;
@@ -25,12 +26,9 @@ int main()
     {
         cout << test_array[3] << endl;
     }
-    catch(int err_code)
+    catch(OutOfBoundsException& error)
     {
-        if (err_code == -1)
-        {
-            cout << "Array out of bound error!\n";
-        }
+        cout << error.GetMessage() << endl;
     }
 
     // test for getelement
@@ -38,12 +36,9 @@ int main()
     {
         cout << test_array.GetElement(-1) << endl;
     }
-    catch(int err_code)
+    catch(OutOfBoundsException& error)
     {
-        if (err_code == -1)
-        {
-            cout << "Array out of bound error!\n";
-        }
+        cout << error.GetMessage() << endl;
     }
 
     // test for set element
@@ -51,12 +46,9 @@ int main()
     {
         test_array[-1] = Point(8, 8);
     }
-    catch(int err_code)
+    catch(OutOfBoundsException& error)
     {
-        if (err_code == -1)
-        {
-            cout << "Array out of bound error!\n";
-        }
+        cout << error.GetMessage() << endl;
     }
     
 

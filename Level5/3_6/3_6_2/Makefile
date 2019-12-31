@@ -1,7 +1,7 @@
 all:
-	g++ Point.cpp -c
-	g++ Shape.cpp -c
-	g++ Array.cpp -c
-	g++ test.cpp -c
-	g++ Shape.o Point.o Array.o test.o -o test.out
+	clang++ Point.cpp -c
+	clang++ Shape.cpp -c
+	clang++ Array.cpp -c
+	clang++ test.cpp -c
+	clang++ Shape.o Point.o Array.o test.o -o test.out
 	rm -f *.o

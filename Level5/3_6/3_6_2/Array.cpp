@@ -6,6 +6,7 @@
  */
 
 #include "Array.hpp"
+#include "OutOfBoundsException.hpp"
 
 using std::cout;
 using std::endl;
@@ -50,7 +51,7 @@ namespace JIAYUAN
         {
             if (index >= m_size || index < 0)
             {
-                throw -1;
+                throw OutOfBoundsException(index);
             }
             return m_data[index];
         }
@@ -61,7 +62,7 @@ namespace JIAYUAN
             // read only, cannot write
             if (index >= m_size || index < 0)
             {
-                throw -1;
+                throw OutOfBoundsException(index);
             }
             return m_data[index];
         }
@@ -92,7 +93,7 @@ namespace JIAYUAN
             // check if the index is out of bound
             if (index >= m_size || index < 0)
             {
-                throw -1;
+                throw OutOfBoundsException(index);
             }
             m_data[index] = element;
         }
@@ -102,7 +103,7 @@ namespace JIAYUAN
             // if the index is out of bound, return the first element
             if (index >= m_size || index < 0)
             {
-                throw -1;
+                throw OutOfBoundsException(index);
             }
             return m_data[index];
         }
