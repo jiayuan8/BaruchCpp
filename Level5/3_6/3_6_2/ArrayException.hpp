@@ -13,16 +13,13 @@
 class ArrayException
 {
 public:
-    ArrayException();       // default constructor
-    virtual ~ArrayException();      // virtual destructor
+    ArrayException() {};       // default constructor
+    virtual ~ArrayException() {};      // virtual destructor
 
     virtual std::string GetMessage() const = 0;     // abstruct GetMessage Function
 
 private:
 
 };
-
-inline ArrayException::ArrayException() {}
-inline ArrayException::~ArrayException() {}
 
 #endif

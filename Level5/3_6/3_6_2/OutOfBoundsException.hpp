@@ -43,7 +43,7 @@ inline OutOfBoundsException::~OutOfBoundsException() {}
 inline std::string OutOfBoundsException::GetMessage() const
 {
     std::stringstream res;
-    res << "The given index: " << m_index << " is out of bound!";
+    res << "OutOfBoundsException: The given index: " << m_index << " is out of bound!";
     return res.str();
 }
 
