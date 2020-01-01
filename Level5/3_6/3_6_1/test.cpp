@@ -20,6 +20,12 @@ int main()
     // create an array
     Array test_array(3);
 
+    // cout << test_array[3] << endl;
+    /* 
+     * If we don't catch the error, the program will terminate when executing the above line
+     * with message: libc++abi.dylib: terminating with uncaught exception of type int
+     */
+
     // test for operator []
     try
     {
