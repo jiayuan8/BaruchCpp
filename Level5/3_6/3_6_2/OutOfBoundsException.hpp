@@ -16,10 +16,10 @@ class OutOfBoundsException: public ArrayException
 {
 public:
     OutOfBoundsException();     // constructor
-    OutOfBoundsException(int index);
+    OutOfBoundsException(int index);    // constructor with index
     ~OutOfBoundsException();    // destructor
 
-    std::string GetMessage() const;
+    std::string GetMessage() const; // out of bounds index
 
 private:
     int m_index;
