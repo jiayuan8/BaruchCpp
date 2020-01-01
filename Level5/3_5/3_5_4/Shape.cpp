@@ -55,5 +55,10 @@ namespace JIAYUAN
         {
             return m_id;
         }
+
+        void Shape::Draw() const
+        {
+            // empty implementation
+        }
     }
 }
