@@ -12,39 +12,45 @@
 #include <sstream>
 #include "ArrayException.hpp"
 
-class OutOfBoundsException: public ArrayException
+namespace JIAYUAN
 {
-public:
-    OutOfBoundsException();     // constructor
-    OutOfBoundsException(int index);    // constructor with index
-    ~OutOfBoundsException();    // destructor
+    namespace Exception
+    {
+        class OutOfBoundsException: public ArrayException
+        {
+        public:
+            OutOfBoundsException();     // constructor
+            OutOfBoundsException(int index);    // constructor with index
+            ~OutOfBoundsException();    // destructor
 
-    std::string GetMessage() const; // out of bounds index
+            std::string GetMessage() const; // out of bounds index
 
-private:
-    int m_index;
+        private:
+            int m_index;
 
-};
+        };
 
-inline OutOfBoundsException::OutOfBoundsException() 
-    : ArrayException(), m_index(0)
-{
-    // default constructor
-}
+        inline OutOfBoundsException::OutOfBoundsException() 
+            : ArrayException(), m_index(0)
+        {
+            // default constructor
+        }
 
-inline OutOfBoundsException::OutOfBoundsException(int index)
-    : ArrayException(), m_index(index) 
-{
-    // constructor with parameters
-}
+        inline OutOfBoundsException::OutOfBoundsException(int index)
+            : ArrayException(), m_index(index) 
+        {
+            // constructor with parameters
+        }
 
-inline OutOfBoundsException::~OutOfBoundsException() {}
+        inline OutOfBoundsException::~OutOfBoundsException() {}
 
-inline std::string OutOfBoundsException::GetMessage() const
-{
-    std::stringstream res;
-    res << "OutOfBoundsException: The given index (" << m_index << ") is out of bound!";
-    return res.str();
+        inline std::string OutOfBoundsException::GetMessage() const
+        {
+            std::stringstream res;
+            res << "OutOfBoundsException: The given index (" << m_index << ") is out of bound!";
+            return res.str();
+        }
+    }
 }
 
 #endif

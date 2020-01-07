@@ -15,6 +15,7 @@ using std::cin;
 using std::endl;
 using namespace JIAYUAN::CAD;
 using namespace JIAYUAN::Containers;
+using namespace JIAYUAN::Exception;
 
 int main()
 {

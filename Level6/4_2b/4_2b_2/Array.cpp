@@ -13,6 +13,7 @@
 
 using std::cout;
 using std::endl;
+using namespace JIAYUAN::Exception;
 
 namespace JIAYUAN
 {

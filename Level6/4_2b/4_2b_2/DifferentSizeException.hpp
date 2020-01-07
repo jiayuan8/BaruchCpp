@@ -12,40 +12,47 @@
 #include <sstream>
 #include "ArrayException.hpp"
 
-class DifferentSizeException: public ArrayException
+namespace JIAYUAN
 {
-public:
-    DifferentSizeException();     // constructor
-    DifferentSizeException(int index1, int index2);    // constructor with index
-    ~DifferentSizeException();    // destructor
+    namespace Exception
+    {
 
-    std::string GetMessage() const; // out of bounds index
+        class DifferentSizeException: public ArrayException
+        {
+        public:
+            DifferentSizeException();     // constructor
+            DifferentSizeException(int index1, int index2);    // constructor with index
+            ~DifferentSizeException();    // destructor
 
-private:
-    int m_index_1;
-    int m_index_2;
+            std::string GetMessage() const; // out of bounds index
 
-};
+        private:
+            int m_index_1;
+            int m_index_2;
 
-inline DifferentSizeException::DifferentSizeException() 
-    : ArrayException(), m_index_1(0), m_index_2(0)
-{
-    // default constructor
-}
+        };
 
-inline DifferentSizeException::DifferentSizeException(int index1, int index2)
-    : ArrayException(), m_index_1(index1), m_index_2(index2)
-{
-    // constructor with parameters
-}
+        inline DifferentSizeException::DifferentSizeException() 
+            : ArrayException(), m_index_1(0), m_index_2(0)
+        {
+            // default constructor
+        }
 
-inline DifferentSizeException::~DifferentSizeException() {}
+        inline DifferentSizeException::DifferentSizeException(int index1, int index2)
+            : ArrayException(), m_index_1(index1), m_index_2(index2)
+        {
+            // constructor with parameters
+        }
 
-inline std::string DifferentSizeException::GetMessage() const
-{
-    std::stringstream res;
-    res << "DifferentSizeException: size1(" << m_index_1 << ") and size2(" << m_index_2 << ") are different!";
-    return res.str();
+        inline DifferentSizeException::~DifferentSizeException() {}
+
+        inline std::string DifferentSizeException::GetMessage() const
+        {
+            std::stringstream res;
+            res << "DifferentSizeException: size1(" << m_index_1 << ") and size2(" << m_index_2 << ") are different!";
+            return res.str();
+        }
+    }
 }
 
 #endif

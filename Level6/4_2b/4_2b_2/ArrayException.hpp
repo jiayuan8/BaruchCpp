@@ -10,16 +10,22 @@
 
 #include <iostream>
 
-class ArrayException
+namespace JIAYUAN
 {
-public:
-    ArrayException() {};       // default constructor
-    virtual ~ArrayException() {};      // virtual destructor
+    namespace Exception
+    {
+        class ArrayException
+        {
+        public:
+            ArrayException() {};       // default constructor
+            virtual ~ArrayException() {};      // virtual destructor
 
-    virtual std::string GetMessage() const = 0;     // abstruct GetMessage Function
+            virtual std::string GetMessage() const = 0;     // abstruct GetMessage Function
 
-private:
+        private:
 
-};
+        };
+    }
+}
 
 #endif

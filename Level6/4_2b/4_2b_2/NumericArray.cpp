@@ -10,6 +10,7 @@
 
 #include "NumericArray.hpp"
 #include "DifferentSizeException.hpp"
+using namespace JIAYUAN::Exception;
 
 namespace JIAYUAN
 {
@@ -70,7 +71,7 @@ namespace JIAYUAN
             {
                 throw DifferentSizeException(this->Size(), other.Size());
             }
-            
+
             NumericArray<T> res(*this);
             for (int i = 0; i < this->Size(); i++)
             {
