@@ -66,6 +66,11 @@ namespace JIAYUAN
         template <typename T>
         NumericArray<T> NumericArray<T>::operator + (const NumericArray<T> other) const
         {
+            if(this->Size() != other.Size())
+            {
+                throw DifferentSizeException(this->Size(), other.Size());
+            }
+            
             NumericArray<T> res(*this);
             for (int i = 0; i < this->Size(); i++)
             {

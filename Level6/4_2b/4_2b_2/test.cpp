@@ -33,5 +33,15 @@ int main()
     test_arr_3.PrintArray();
     cout << "Dot Product: " << test_arr_1.DotProduct(test_arr_2) << endl;
 
+    NumericArray<double> test_arr_4(5);
+    try
+    {
+        test_arr_1.DotProduct(test_arr_4);
+    }
+    catch(ArrayException& ex)
+    {
+        cout << ex.GetMessage() << endl;
+    }
+
     return 0;
 }
