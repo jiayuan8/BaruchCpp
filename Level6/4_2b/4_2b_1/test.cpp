@@ -19,34 +19,19 @@ using namespace JIAYUAN::Containers;
 
 int main()
 {
-    // test default constructor and constructor with parameters
-    Array<Point> points(3);
-    Array<Point> points_2;
+    Array<int> intArray1;
+    Array<int> intArray2;
+    Array<double> doubleArray;
 
-    // test [] operator
-    points[0] = Point(3, 3);
-    points[1] = Point(0.09, 0.09);
-    points[2] = Point(0.71, 0.89);
+    cout<<intArray1.DefaultSize()<<endl; // this line will print 10
+    cout<<intArray2.DefaultSize()<<endl; // this line will print 10
+    cout<<doubleArray.DefaultSize()<<endl;// this line will print 10
+    
+    intArray1.DefaultSize(15);
 
-    // test assign operator
-    points_2 = points;
-    cout << points_2[0] << endl;
-    cout << points_2[1] << endl;
-    cout << points_2[2] << endl;
-
-    // test copy constructor
-    Array<Point> points_3(points);
-
-    // test Size, SetElement, GetElement
-    cout << points_3.Size() << endl;
-    points_3.SetElement(0, Point(9, 9));
-    cout << points_3.GetElement(0) << endl;
-
-    // test [] for const object
-    const Array<Point> points_const(points_3);
-    cout << points_const[0] << endl;
-    cout << points_const[1] << endl;
-    cout << points_const[2] << endl;
+    cout<<intArray1.DefaultSize()<<endl; // this line will print 15
+    cout<<intArray2.DefaultSize()<<endl; // this line will print 15
+    cout<<doubleArray.DefaultSize()<<endl;// this line will print 10
 
     return 0;
 }
