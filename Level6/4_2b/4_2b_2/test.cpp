@@ -19,6 +19,14 @@ using namespace JIAYUAN::Exception;
 
 int main()
 {
+    /* 
+     * Answer: The type used as template argument for Numeric Array 
+     * must support "+" and "*" operation internally (dot product), 
+     * as well as "*" operation with numerical factor(such as int, double, etc)
+     * 
+     * we cannot create a numeric array with point since the Point class 
+     * doesn't support "*" operation with two point objects.
+     */
     NumericArray<double> test_arr_1(10);
     NumericArray<double> test_arr_2(10);
     for (int i = 0; i < 10; i++)
