@@ -138,6 +138,17 @@ namespace JIAYUAN
             }
             return m_data[index];
         }
+
+        template <typename T>
+        void Array<T>::PrintArray() const
+        {
+            std::cout << "Print Array: Size(" << m_size << ")" << std::endl;
+            for (size_t i = 0; i < m_size; i++)
+            {
+                std::cout << m_data[i] << " ";
+            }
+            std::cout << std::endl;
+        }
     }
 }
 

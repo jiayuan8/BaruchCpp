@@ -23,7 +23,7 @@ namespace JIAYUAN
             Array();                // default constructor
             Array(size_t size);     // constructor with size argument
             Array(const Array<T>& other);  // copy constructor
-            ~Array();               // destructor
+            virtual ~Array();               // destructor
 
             T& operator [] (int index);                 // overloading assign operator, allow write
             const T& operator [] (int index) const;     // overloding the [] operator
@@ -34,6 +34,7 @@ namespace JIAYUAN
             void DefaultSize(size_t new_default_size);
             void SetElement(size_t index, const T& element) const;  // set the element of the array
             const T& GetElement(size_t index) const;    // return the element of the array given the index
+            void PrintArray() const;
             
         private:
             T* m_data;          // pointer pointing to the data

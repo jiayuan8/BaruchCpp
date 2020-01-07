@@ -6,10 +6,9 @@
  */
 
 #include <iostream>
-#include "Array.cpp"
-// #include "Array.hpp"
+#include "NumericArray.hpp"
 #include "Point.hpp"
-#include "OutOfBoundsException.hpp"
+#include "ArrayException.hpp"
 
 using std::cout;
 using std::cin;
@@ -19,19 +18,11 @@ using namespace JIAYUAN::Containers;
 
 int main()
 {
-    Array<int> intArray1;
-    Array<int> intArray2;
-    Array<double> doubleArray;
-
-    cout<<intArray1.DefaultSize()<<endl; // this line will print 10
-    cout<<intArray2.DefaultSize()<<endl; // this line will print 10
-    cout<<doubleArray.DefaultSize()<<endl;// this line will print 10
-    
-    intArray1.DefaultSize(15);
-
-    cout<<intArray1.DefaultSize()<<endl; // this line will print 15
-    cout<<intArray2.DefaultSize()<<endl; // this line will print 15
-    cout<<doubleArray.DefaultSize()<<endl;// this line will print 10
+    NumericArray<int> test_arr(10);
+    for (int i = 0; i < 10; i++)
+    {
+        test_arr[i] = 
+    }
 
     return 0;
 }
