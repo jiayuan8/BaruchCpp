@@ -109,7 +109,7 @@ namespace JIAYUAN
 
             // copy the elements
             m_size = source.m_size;
-            m_data = new CAD::Point[m_size];
+            m_data = new T[m_size];
             for (size_t i = 0; i < m_size; i++)
             {
                 m_data[i] = source[i];

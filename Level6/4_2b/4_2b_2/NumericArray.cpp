@@ -75,7 +75,7 @@ namespace JIAYUAN
         }
 
         template <typename T>
-        const T& NumericArray<T>::DotProduct(const NumericArray<T> other) const
+        const T NumericArray<T>::DotProduct(const NumericArray<T> other) const
         {
             if(this->Size() != other.Size())
             {
@@ -85,7 +85,7 @@ namespace JIAYUAN
             T res(0);   // initialize to 0
             for (int i = 0; i < this->Size(); i++)
             {
-                res += ((*this)[i] + other[i]);
+                res += ((*this)[i] * other[i]);
             }
             return res;
         }
