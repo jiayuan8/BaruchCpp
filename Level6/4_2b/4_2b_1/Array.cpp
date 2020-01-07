@@ -18,6 +18,10 @@ namespace JIAYUAN
 {
     namespace Containers
     {
+        // initializing static member
+        template <typename T>
+        size_t Array<T>::default_size = 10;
+
         template <typename T>
         Array<T>::Array(): m_data(new T[default_size]), m_size(default_size)
         {
