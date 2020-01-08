@@ -20,13 +20,23 @@ using namespace JIAYUAN::Exception;
 int main()
 {
     /* 
-     * Answer: The type used as template argument for Numeric Array 
-     * must support "+" and "*" operation internally (dot product), 
-     * as well as "*" operation with numerical factor(such as int, double, etc)
+     * Answer: The assuption is that its okay to pass any type to the
+     * numeric array as template argument to just create an array. 
+     * But you cannot use any functions that the type not supported, 
+     * such as DotProduct() for a circle.
      * 
-     * we cannot create a numeric array with point since the Point class 
-     * doesn't support "*" operation with two point objects.
+     * Answer: Actually, we can create a NumericArray of Point type.
+     * However, we need to make sure that we will not use any member 
+     * function (operators) that Point doesn't support, such as
+     * DotProduct. This is because template functions are not
+     * going to be compiled until they are used.
+     * (see the three lines below for example)
      */
+
+    NumericArray<Point> test_arr_p(10);     // this line will have no error
+    test_arr_p.PrintArray();                // this line will print the array of point
+    // test_arr_p.DotProduct(test_arr_p);   // this line will produce error
+
     NumericArray<double> test_arr_1(10);
     NumericArray<double> test_arr_2(10);
     for (int i = 0; i < 10; i++)
