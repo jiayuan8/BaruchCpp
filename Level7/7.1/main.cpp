@@ -2,7 +2,7 @@
  * ----------------------------------------
  * @description: exercise of STL containers
  * @author: Jiayuan Li
- * @version: 1.0
+ * @version: 1.0 Jan, 8th 2020
  */
 
 #include <iostream>
