@@ -9,8 +9,6 @@
 #define ARRAY_HPP
 
 #include <iostream>
-#include "Shape.hpp"
-#include "Point.hpp"
 
 namespace JIAYUAN
 {
