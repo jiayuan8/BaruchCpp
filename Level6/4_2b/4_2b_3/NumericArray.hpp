@@ -32,7 +32,7 @@ namespace JIAYUAN
             NumericArray<T> operator + (const NumericArray<T> other) const;
 
             // member functions
-            const T DotProduct(const NumericArray<T> other) const;
+            T DotProduct(const NumericArray<T> other) const;
 
         private:
 

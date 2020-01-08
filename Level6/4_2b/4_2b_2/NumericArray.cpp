@@ -81,7 +81,7 @@ namespace JIAYUAN
         }
 
         template <typename T>
-        const T NumericArray<T>::DotProduct(const NumericArray<T> other) const
+        T NumericArray<T>::DotProduct(const NumericArray<T> other) const
         {
             if(this->Size() != other.Size())
             {
