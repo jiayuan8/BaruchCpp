@@ -21,13 +21,13 @@ template<typename T>
 double Sum(const T& container);
 // template sum funtion for list and vector given iterators
 template<typename T> 
-double Sum(const typename T::const_iterator& it1, const typename T::const_iterator& it2);
+double Sum(const typename T::const_iterator& start, const typename T::const_iterator& end);
 // template sum funtion for map given containers
 template<typename K, typename V> 
 double Sum(const map<K, V>& container);
 // template sum funtion for map given iterators
 template<typename K, typename V> 
-double Sum(const typename map<K, V>::const_iterator& it1, const typename map<K, V>::const_iterator& it2);
+double Sum(const typename map<K, V>::const_iterator& start, const typename map<K, V>::const_iterator& end);
 
 int main()
 {
@@ -52,14 +52,14 @@ int main()
     test_map["Ten"] = 10;
 
     // test Sum() by receving reference of containers
-    cout << "Sum of the list: " << Sum(test_list) << endl;
-    cout << "Sum of the vector: " << Sum(test_vector) << endl;
-    cout << "Sum of the map: " << Sum(test_map) << endl;
+    cout << "(passing reference of container) Sum of the list: " << Sum(test_list) << endl;
+    cout << "(passing reference of container) Sum of the vector: " << Sum(test_vector) << endl;
+    cout << "(passing reference of container) Sum of the map: " << Sum(test_map) << endl;
 
     // test Sum() by receving reference of iterators
-    cout << "Sum of the list: " << Sum<list<double> >(test_list.begin(), test_list.end()) << endl;
-    cout << "Sum of the vector: " << Sum<vector<double> >(test_vector.begin(), test_vector.end()) << endl;
-    cout << "Sum of the vector: " << Sum<std::string, double>(test_map.begin(), test_map.end()) << endl;
+    cout << "(passing reference of iterator) Sum of the list: " << Sum<list<double> >(test_list.begin(), test_list.end()) << endl;
+    cout << "(passing reference of iterator) Sum of the vector: " << Sum<vector<double> >(test_vector.begin(), test_vector.end()) << endl;
+    cout << "(passing reference of iterator) Sum of the vector: " << Sum<std::string, double>(test_map.begin(), test_map.end()) << endl;
 }
 
 template<typename T>
@@ -75,10 +75,10 @@ double Sum(const T& container)
 }
 
 template<typename T> 
-double Sum(const typename T::const_iterator& it1, const typename T::const_iterator& it2)
+double Sum(const typename T::const_iterator& start, const typename T::const_iterator& end)
 {
     double res = 0;
-    for (typename T::const_iterator it = it1; it != it2; it++)
+    for (typename T::const_iterator it = start; it != end; it++)
     {
         res += *it;
     }
@@ -98,10 +98,10 @@ double Sum(const map<K, V>& container)
 }
 
 template<typename K, typename V> 
-double Sum(const typename map<K, V>::const_iterator& it1, const typename map<K, V>::const_iterator& it2)
+double Sum(const typename map<K, V>::const_iterator& start, const typename map<K, V>::const_iterator& end)
 {
     double res = 0;
-    for (typename map<K, V>::const_iterator it = it1; it != it2; it++)
+    for (typename map<K, V>::const_iterator it = start; it != end; it++)
     {
         res += it->second;
     }
