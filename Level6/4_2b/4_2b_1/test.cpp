@@ -8,13 +8,11 @@
 #include <iostream>
 #include "Array.cpp"
 // #include "Array.hpp"
-#include "Point.hpp"
 #include "OutOfBoundsException.hpp"
 
 using std::cout;
 using std::cin;
 using std::endl;
-using namespace JIAYUAN::CAD;
 using namespace JIAYUAN::Containers;
 
 int main()
