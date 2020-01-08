@@ -17,7 +17,7 @@ using namespace JIAYUAN::Exception;
 
 int main()
 {
-    Stack<int, 3> test_stack_2;     // test constructor with parameters
+    Stack<int, 3> test_stack_2;     // test default constructor
 
     test_stack_2.Push(1);           // test push
 
