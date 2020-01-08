@@ -5,8 +5,8 @@
  *  @version: 1.0 Dec 28, 2019
  */
 
-#ifndef STACK_CPP
-#define STACK_CPP
+#ifndef STACK_HPP
+#define STACK_HPP
 
 #include "Array.hpp"
 
@@ -40,5 +40,8 @@ namespace JIAYUAN
     }
 }
 
+#ifndef STACK_CPP
+#include "Stack.cpp"
+#endif
 
 #endif

@@ -6,8 +6,7 @@
  */
 
 #include <iostream>
-#include "PointArray.hpp"
-#include "Point.hpp"
+#include "Stack.hpp"
 #include "ArrayException.hpp"
 
 using std::cout;
@@ -19,25 +18,38 @@ using namespace JIAYUAN::Exception;
 
 int main()
 {
-    // test constructors
-    PointArray point_arr_0;
-    PointArray point_arr_1(3);
-    PointArray point_arr_2(point_arr_1);
-    point_arr_1[0] = Point(0, 0);
-    point_arr_1[1] = Point(0, 1);
-    point_arr_1[2] = Point(0, 2);
+    Stack<int> test_stack_1;        // test default constructor
+    Stack<int> test_stack_2(3);     // test constructor with parameters
 
-    point_arr_1.PrintArray();
-    point_arr_2.PrintArray();
+    test_stack_2.Push(1);           // test push
 
-    // test assign operator
-    point_arr_2 = point_arr_1;
+    Stack<int> test_stack_3(test_stack_2);      // test copy constructor
+    Stack<int> test_stack_4 = test_stack_3;     // test assign operator
 
-    point_arr_1.PrintArray();
-    point_arr_2.PrintArray();
+    test_stack_4.Push(2);
+    test_stack_4.Push(3);
 
-    // test Length()
-    cout << "Length: " << point_arr_1.Length() << endl;
+    try
+    {
+        test_stack_4.Push(4);       // shoud throw exception
+    }
+    catch(const ArrayException& ex)
+    {
+        cout << ex.GetMessage() << endl;
+    }
+    
+    cout << test_stack_4.Pop() << endl;     // test pop
+    cout << test_stack_4.Pop() << endl;
+    cout << test_stack_4.Pop() << endl;
+
+    try
+    {
+        cout << test_stack_4.Pop() << endl;     // should throw exception
+    }
+    catch(const ArrayException& ex)
+    {
+        cout << ex.GetMessage() << endl;
+    }
 
     return 0;
 }

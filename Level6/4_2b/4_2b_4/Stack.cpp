@@ -5,6 +5,9 @@
  *  @version: 1.0 Dec 28, 2019
  */
 
+#ifndef STACK_CPP
+#define STACK_CPP
+
 #include "Stack.hpp"
 
 namespace JIAYUAN
@@ -51,7 +54,7 @@ namespace JIAYUAN
         template <typename T>
         void Stack<T>::Push(const T& new_element)
         {
-            m_arr[m_current + 1] = new_element;
+            m_arr[m_current] = new_element;
             m_current += 1;
         }
 
@@ -59,8 +62,10 @@ namespace JIAYUAN
         const T& Stack<T>::Pop()
         {
             const T& res = m_arr[m_current - 1];
-            m_current - 1;
+            m_current -= 1;
             return res;
         }
     }
 }
+
+#endif
