@@ -19,6 +19,19 @@ using namespace JIAYUAN::Containers;
 
 int main()
 {
+
+    /* Q: Can you explain how this works?:
+     * A: template classes are not actual classes but template of classes.
+     * Therefore, they are not compiled until they have been used (which is
+     * Instantiation). Therefore, when these function are used in main.cpp, 
+     * the compiler need to find the implementation of these functions (which
+     * is located in the source file (cpp file)). Thus, if you only include the 
+     * header file in the main.cpp, the compiler cannot find where the implement
+     * of these template are located. That's why we need to include either the
+     * source file or inlcude the source file in the header file to let the 
+     * compiler know where the definition of the functions are located.
+     */
+
     // test default constructor and constructor with parameters
     Array<Point> points(3);
     Array<Point> points_2;
