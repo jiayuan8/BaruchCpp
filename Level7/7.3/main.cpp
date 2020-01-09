@@ -40,8 +40,9 @@ int main()
     cout << "count_if for vector: " << count_if(test_vector.begin(), test_vector.end(), lessThen) << endl;
 
     // test count_if by passing the function object
-    cout << "count_if for list  : " << count_if(test_list.begin(), test_list.end(), CheckObj<double>(3)) << endl;
-    cout << "count_if for vector: " << count_if(test_vector.begin(), test_vector.end(), CheckObj<double>(3)) << endl;
+    CheckObj<double> func_obj(3);   // create the function object
+    cout << "count_if for list  : " << count_if(test_list.begin(), test_list.end(), func_obj) << endl;
+    cout << "count_if for vector: " << count_if(test_vector.begin(), test_vector.end(), func_obj) << endl;
 
     return 0;
 }
