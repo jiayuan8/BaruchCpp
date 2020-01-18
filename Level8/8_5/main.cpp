@@ -19,7 +19,8 @@ using namespace boost::math;
 int main()
 {
 	cout << "\n-------- Exponential distribution: --------\n";
-    exponential_distribution<> myExponential(3.0); // Default type is 'double'
+	double scaleParameter = 0.5;
+    exponential_distribution<> myExponential(scaleParameter); // Default type is 'double'
 	cout << "Mean: " << mean(myExponential) << ", standard deviation: " << standard_deviation(myExponential) << endl;
 
 	// Distributional properties
@@ -51,8 +52,8 @@ int main()
 
 
 	cout << "\n-------- Poisson distribution: --------\n";
-    double lamda = 3.0; // Shape parameter, k
-	poisson_distribution<double> myPoisson(lamda);
+    double mean = 3.0;
+	poisson_distribution<double> myPoisson(mean);
 
 	double val = 13.0;
 	cout << endl <<  "pdf: " << pdf(myPoisson, val) << endl;
