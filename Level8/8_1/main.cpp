@@ -38,14 +38,14 @@ int main()
         std::cout << test_arr[1]->ToString() << std::endl;
         std::cout << test_arr[2]->ToString() << std::endl;
 
-        // print the shapes
+        // currently, there are 2 pointers pointing to each of the objects
         std::cout << "point users:  " << test_point.use_count() << std::endl;
         std::cout << "line users:   " << test_line.use_count() << std::endl;
         std::cout << "circle users: " << test_circle.use_count() << std::endl;
 
     }
 
-    // test whether the shared pointer delete object automatically
+    // currently, there are 1 pointers pointing to each of the objects
     std::cout << "point exists:  " << test_point.use_count() << std::endl;
     std::cout << "line exists:   " << test_line.use_count() << std::endl;
     std::cout << "circle exists: " << test_circle.use_count() << std::endl;
@@ -55,6 +55,7 @@ int main()
      * 1 circle destructor calls
      * 4 point destructor calls
      * 6 shape destructor calls
+     * The output matches out assumption, therefore the shapes are deleted
      */
     std::cout << "*** destructor calls ***" << std::endl;
 
