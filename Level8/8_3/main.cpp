@@ -39,9 +39,9 @@ int main()
     }
 
     // test visitor
-    visitor test_visitor(1, 3);
-    boost::apply_visitor(test_visitor, test_variant);
-    std::cout << test_variant << std::endl;
+    visitor test_visitor(1, 3);                         // create visitor
+    boost::apply_visitor(test_visitor, test_variant);   // using the apply_visitor
+    std::cout << test_variant << std::endl;             // print the result
     
     return 0;
 }
