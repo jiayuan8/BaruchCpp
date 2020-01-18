@@ -27,25 +27,34 @@ int main()
     ShapePtr test_circle(new Circle());
 
     {
+        ShapePtr test_point2(new Point());
         // create an array and fill it with the objects
-        ShapeArray test_arr(3);
+        ShapeArray test_arr(4);
         test_arr[0] = test_point;
         test_arr[1] = test_line;
         test_arr[2] = test_circle;
+        test_arr[3] = test_point2;
 
         // print the shapes
         std::cout << test_arr[0]->ToString() << std::endl;
         std::cout << test_arr[1]->ToString() << std::endl;
         std::cout << test_arr[2]->ToString() << std::endl;
+        std::cout << test_arr[3]->ToString() << std::endl;
 
         // currently, there are 2 pointers pointing to each of the objects
+        std::cout << "\n----- each obj are referenced by for 2 times -----" << std::endl;
         std::cout << "point users:  " << test_point.use_count() << std::endl;
         std::cout << "line users:   " << test_line.use_count() << std::endl;
         std::cout << "circle users: " << test_circle.use_count() << std::endl;
+        std::cout << "circle users: " << test_point2.use_count() << std::endl;
+
+        std::cout << "\n----- destructor calls (for point and shape) -----" << std::endl;
+        // ***the destructor for point and shape should be called once here***
 
     }
 
     // currently, there are 1 pointers pointing to each of the objects
+    std::cout << "\n----- each obj are referenced by only for 1 time -----" << std::endl;
     std::cout << "point exists:  " << test_point.use_count() << std::endl;
     std::cout << "line exists:   " << test_line.use_count() << std::endl;
     std::cout << "circle exists: " << test_circle.use_count() << std::endl;
@@ -57,7 +66,7 @@ int main()
      * 6 shape destructor calls
      * The output matches out assumption, therefore the shapes are deleted
      */
-    std::cout << "*** destructor calls ***" << std::endl;
+    std::cout << "\n----- destructor calls (line: 1, circle: 1, point: 4, shape: 6) -----" << std::endl;
 
     return 0;
 
