@@ -50,6 +50,14 @@ int main()
     std::cout << "line exists:   " << test_line.use_count() << std::endl;
     std::cout << "circle exists: " << test_circle.use_count() << std::endl;
 
+    /* if the shape are deleted, then there will be:
+     * 1 line destructor calls
+     * 1 circle destructor calls
+     * 4 point destructor calls
+     * 6 shape destructor calls
+     */
+    std::cout << "*** destructor calls ***" << std::endl;
+
     return 0;
 
 }
