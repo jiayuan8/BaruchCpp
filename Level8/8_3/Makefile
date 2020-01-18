@@ -4,5 +4,6 @@ all:
 	clang++ Point.cpp -c
 	clang++ main.cpp -c
 	clang++ Shape.cpp -c
-	clang++ Line.o Circle.o Point.o Shape.o main.o -o test.out
+	clang++ visitor.cpp -c
+	clang++ Line.o Circle.o Point.o Shape.o main.o visitor.o -o test.out
 	rm -rf *.o

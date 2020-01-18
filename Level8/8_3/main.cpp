@@ -8,10 +8,12 @@
 
 #include <iostream>
 #include <boost/variant.hpp>
+#include <boost/variant/apply_visitor.hpp>
 #include "Line.hpp"
 #include "Circle.hpp"
 #include "Point.hpp"
 #include "Array.hpp"
+#include "visitor.hpp"
 
 using namespace JIAYUAN::CAD;
 using namespace JIAYUAN::Containers;
@@ -35,8 +37,12 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
-    
 
+    // test visitor
+    visitor test_visitor(1, 3);
+    boost::apply_visitor(test_visitor, test_variant);
+    std::cout << test_variant << std::endl;
+    
     return 0;
 }
 
