@@ -39,6 +39,7 @@ int main()
         statistics[outcome] += 1;
     }
 
+    // final output
     cout << endl << "How many trials? 1000000" << endl << endl;
     for (int i = 1; i <= 6; i++)
     {
